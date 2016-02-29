@@ -1,0 +1,19 @@
+{
+  "name": "react-fundamentals-curriculum",
+  "version": "1.0.0",
+  "description": "Curriculum for React.js Program's React Fundamentals course.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ReactjsProgram/react-fundamentals-curriculum.git"
+  },
+  "author": "Tyler McGinnis <tylermcginnis33@gmail.com> (http://tylermcginnis.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ReactjsProgram/react-fundamentals-curriculum/issues"
+  },
+  "homepage": "https://github.com/ReactjsProgram/react-fundamentals-curriculum#readme"
+}
