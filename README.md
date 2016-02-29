@@ -24,3 +24,4 @@ The next step I take is setting up React Router to handle my routing. Before I j
  * Set up your route configuration file to activate the Main component whenever a user hits the index '/' path of your app.
  * Now instead of rendering <HelloWorld /> to the DOM, render your routes configuration.
 
+## Step 3:

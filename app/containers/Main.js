@@ -3,7 +3,10 @@ var React = require('react');
 var HelloWorld = React.createClass({
   render: function () {
     return (
-      <div>Hello</div>
+      <div>
+        <h1>Main.js Header</h1>
+        {this.props.children}
+      </div>
     )
   }
 })
