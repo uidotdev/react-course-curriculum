@@ -23,7 +23,7 @@ Before I ever start a React app I always create a HelloWorld component just to m
  * Start webpack and make sure everything is working
 
 ##Step 2: Let React Router handle Routing
-The next step I take is setting up React Router to handle my routing. Before I jump into any real coding, again, I make sure everythig is wired up correctly.
+The next step I take is setting up React Router to handle my routing. Before I jump into any real coding, again, I make sure everything is wired up correctly.
 
  * Move your HelloWorld component to a Main.js file (I have mine located in a containers folder)
  * Set up your route configuration file to activate the Main component whenever a user hits the index '/' path of your app.
@@ -45,11 +45,11 @@ The next step I take is setting up React Router to handle my routing. Before I j
 <img src="http://www.reactjsprogram.com/images/reactfundamentals-step4.png" width="400">
 
 ## Step 5: Wire up the Weather Button
-In this step we're going to wite up the button to our weather API, though we'll just log the result from now.
+In this step we're going to write up the button to our weather API, though we'll just log the result from now.
 
  * Wire up your button (mine says "Get Weather") to log whatever is in the input field when the button is clicked.
  * With the API key we're using, you don't need an API key, but you're going to get rate limited pretty quick. It's free and probably worth it. For more info [click here](http://openweathermap.org/appid).
- * We're going to be querying the weather API for two types of data. A specific city's current weather, and the 5 day forcast for a specific city.
+ * We're going to be querying the weather API for two types of data. A specific city's current weather, and the 5 day forecast for a specific city.
  * Those two endpoints are,
       Current Weather: http://api.openweathermap.org/data/2.5/weather?q=CITY-NAME&type=accurate&APPID=YOUR-API-KEY
       5 Day Forecast: http://api.openweathermap.org/data/2.5/forecast/daily?q=CITY-NAME&type=accurate&APPID=YOUR-API-KEY&cnt=5
@@ -68,7 +68,7 @@ In this step we're going to wite up the button to our weather API, though we'll 
 ## Step 7: Make /forecast show loading and fetch
 Before we had our API request when the user clicked on the "Get Weather" button. However, in Step 6 we removed that and are instead routing to the /forecast route. Now what we need to do it when someone reaches the /forecast route, show a loading indicator while the component fetches the city data from the weather API.
 
- * When someone goes to /forecast, have that component that becomes active fetch the forcast for the specific city which should probably be a route paramter.
+ * When someone goes to /forecast, have that component that becomes active fetch the forecast for the specific city which should probably be a route parameter.
  * Also make it so this component initially renders "Loading" while the request to the weather API is being made.
  * When the request comes back, console.log that data and set loading to false.
  * By this point when your user goes to /forecast, they should see a loading screen then when the loading screen goes away they should see the forecast data in the console.
@@ -91,7 +91,7 @@ Now we want to make it so you can click on a specific day and we'll be taken to 
 ## Step 10: Finish the UI for the /detail route
 At this point the /detail route should have all the data it needs to render.
 
- * Finish the app by finishin the UI for the /detail route.
+ * Finish the app by finishing the UI for the /detail route.
 
 The final /detail route should now look like this.
 
