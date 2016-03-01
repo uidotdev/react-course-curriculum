@@ -1,6 +1,7 @@
 var React = require('react');
 var PropTypes = React.PropTypes;
 var GetCity = require('../components/GetCity');
+var getForcast = require('../helpers/api').getForcast
 
 var GetCityContainer = React.createClass({
   getDefaultProps () {
@@ -18,6 +19,7 @@ var GetCityContainer = React.createClass({
   },
   handleSubmitCity: function () {
     console.log(this.state.city)
+    getForcast(this.state.city)
   },
   handleUpdateCity: function (e) {
     this.setState({

@@ -41,3 +41,16 @@ The next step I take is setting up React Router to handle my routing. Before I j
  * As of right now, my app looks like this (with no actual functionality)
 
 <img src="http://www.reactjsprogram.com/images/reactfundamentals-step4.png" width="400">
+
+## Step 5: Wire up the Weather Button
+In this step we're going to wite up the button to our weather API, though we'll just log the result from now.
+
+ * Wire up your button (mine says "Get Weather") to log whatever is in the input field when the button is clicked.
+ * With the API key we're using, you don't need an API key, but you're going to get rate limited pretty quick. It's free and probably worth it. For more info [click here](http://openweathermap.org/appid).
+ * We're going to be querying the weather API for two types of data. A specific city's current weather, and the 5 day forcast for a specific city.
+ * Those two endpoints are,
+      Current Weather: http://api.openweathermap.org/data/2.5/weather?q=CITY-NAME&type=accurate&APPID=YOUR-API-KEY
+      5 Day Forecast: http://api.openweathermap.org/data/2.5/forecast/daily?q=CITY-NAME&type=accurate&APPID=YOUR-API-KEY&cnt=5
+ * Tie up the "Get Weather" button to be able to grab the city's current weather and log it to the console.
+ * Once the previous step is working, also create the functionality for the 5 day forecast request and test is by hooking it up to the "Get Weather" button. Once it works, change it back to get the current weather.
+ * If you get stuck with the API check out the "step5" branch. My code is located under /app/helpers/api.js
