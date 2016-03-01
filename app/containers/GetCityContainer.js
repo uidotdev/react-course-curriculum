@@ -4,7 +4,7 @@ var GetCity = require('../components/GetCity');
 var getForcast = require('../helpers/api').getForcast
 
 var GetCityContainer = React.createClass({
-  getDefaultProps () {
+  getDefaultProps: function () {
     return {
       direction: 'column'
     }
@@ -12,7 +12,7 @@ var GetCityContainer = React.createClass({
   propTypes: {
     direction: PropTypes.string
   },
-  getInitialState () {
+  getInitialState: function () {
     return {
       city: ''
     }
