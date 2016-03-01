@@ -29,7 +29,8 @@ function getStyles (props) {
     flexDirection: props.direction || 'column',
     justifyContent: 'center',
     alignItems: 'center',
-    marginBottom: 50
+    maxWidth: 300,
+    alignSelf: 'right'
   }
 }
 
