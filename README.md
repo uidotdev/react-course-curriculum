@@ -32,4 +32,4 @@ The next step I take is setting up React Router to handle my routing. Before I j
  * Create a Home component and set it to the IndexRoute in your route configuration.
  * At this point when you go to localhost:8080 you should see any UI the Main component spits out as well as any UI the Home component spits out.
  * Add the full page background image to the Home component as well as the input field and button. At this point, my app looks like this.
- <img src="http://www.reactjsprogram.com/images/home-ui.png" width="400">
+ * <img src="http://www.reactjsprogram.com/images/home-ui.png" width="400">

@@ -1,36 +1,17 @@
 var React = require('react');
-var container = require('../styles').container;
-var ZipCode = require('../components/ZipCode');
+var PropTypes = React.PropTypes;
+var ZipCodeContainer = require('../containers/ZipCodeContainer');
 
-var styles = {
-  wrapper: {
-    backgroundSize: 'cover',
-    backgroundImage: "url('app/images/pattern.svg')",
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center'
-  },
+function Home (props) {
+  return (
+    <div style={props.onMakeStyle()}>
+      <ZipCodeContainer />
+    </div>
+  )
 }
 
-var Home = React.createClass({
-  makeContainerStyles: function () {
-    return Object.keys(container).reduce(function (newStyle, val) {
-      newStyle[val] = container[val]
-      return newStyle
-    }, styles.wrapper)
-  },
-  render: function () {
-    return (
-      <div style={this.makeContainerStyles()}>
-        <ZipCode
-          direction='column'
-          onSubmitZipcode={function(){}}
-          onUpdateZipcode={function(){}}
-          zipcode={123} />
-      </div>
-    )
-  }
-});
+Home.propTypes = {
+  onMakeStyle: PropTypes.func.isRequired
+}
 
 module.exports = Home;
