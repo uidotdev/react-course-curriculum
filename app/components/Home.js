@@ -1,6 +1,6 @@
 var React = require('react');
 var PropTypes = React.PropTypes;
-var ZipCodeContainer = require('../containers/ZipCodeContainer');
+var GetCityContainer = require('../containers/GetCityContainer');
 
 var styles = {
   container: {
@@ -23,8 +23,8 @@ var styles = {
 function Home (props) {
   return (
     <div style={styles.container}>
-      <h1 style={styles.header}>Enter a Zip code</h1>
-      <ZipCodeContainer />
+      <h1 style={styles.header}>Enter a City and State</h1>
+      <GetCityContainer />
     </div>
   )
 }

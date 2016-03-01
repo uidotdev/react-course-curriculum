@@ -6,7 +6,7 @@ function Button (props) {
     <button type='button'
       style={{margin: 10}}
       className='btn btn-success'
-      onClick={props.onSubmitZipcode}>
+      onClick={props.onSubmitCity}>
         {props.children}
     </button>
   )
@@ -16,10 +16,10 @@ function InputField (props) {
   return (
     <input
       className='form-control'
-      onChange={props.onUpdateZipcode}
-      placeholder='Zipcode'
+      onChange={props.onUpdateCity}
+      placeholder='St. George, Utah'
       type='text'
-      value={props.zipcode} />
+      value={props.city} />
   )
 }
 
@@ -34,25 +34,25 @@ function getStyles (props) {
   }
 }
 
-function ZipCode (props) {
+function GetCity (props) {
   return (
     <div style={getStyles(props)}>
       <InputField
-        onUpdateZipcode={props.onUpdateZipcode}
-        zipcode={props.zipcode} />
+        onUpdateCity={props.onUpdateCity}
+        city={props.city} />
       <Button
-        onSubmitZipcode={props.onSubmitZipcode}>
+        onSubmitCity={props.onSubmitCity}>
           Get Weather
       </Button>
     </div>
   )
 }
 
-ZipCode.propTypes = {
+GetCity.propTypes = {
   direction: PropTypes.string,
-  onSubmitZipcode: PropTypes.func.isRequired,
-  onUpdateZipcode: PropTypes.func.isRequired,
-  zipecode: PropTypes.number
+  onSubmitCity: PropTypes.func.isRequired,
+  onUpdateCity: PropTypes.func.isRequired,
+  city: PropTypes.string.isRequired
 }
 
-module.exports = ZipCode;
+module.exports = GetCity;

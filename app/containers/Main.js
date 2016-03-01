@@ -1,5 +1,5 @@
 var React = require('react');
-var ZipCodeContainer = require('./ZipCodeContainer');
+var GetCityContainer = require('./GetCityContainer');
 
 var styles = {
   container: {
@@ -22,7 +22,7 @@ var Main = React.createClass({
       <div style={styles.container}>
         <div style={styles.header}>
           <h2 style={{margin: 0}}>Clever Title</h2>
-          <ZipCodeContainer direction='row' />
+          <GetCityContainer direction='row' />
         </div>
         {this.props.children}
       </div>
