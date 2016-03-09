@@ -34,10 +34,3 @@ The next step I take is setting up React Router to handle my routing. Before I j
  * Add the full page background image to the Home component as well as the input field and button. At this point, my app looks like this.
 
 <img src="http://www.reactjsprogram.com/images/home-ui.png" width="400">
-
-## Step 4: ADD UI for Header
-
- * Finish the UI for the Header component.
- * As of right now, my app looks like this (with no actual functionality)
-
-<img src="http://www.reactjsprogram.com/images/reactfundamentals-step4.png" width="400">
