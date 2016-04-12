@@ -1,8 +1,7 @@
-import React from 'react';
 import ReactDom from 'react-dom';
-import Main from './containers/main';
+import routes from './config/routes';
 
 ReactDom.render(
-  <Main />,
+  routes,
   document.getElementById('app')
 );
