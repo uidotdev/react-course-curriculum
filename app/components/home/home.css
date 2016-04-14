@@ -1,0 +1,16 @@
+.Home-container {
+  background-size: cover;
+  background-image: url("/app/images/pattern.svg");
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+  
+.Home-header {
+  font-size: 45px;
+  color: #fff;
+  font-weight: 100;
+}
