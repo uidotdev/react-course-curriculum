@@ -1,4 +1,4 @@
-.Home-container {
+.container {
   background-size: cover;
   background-image: url("/app/images/pattern.svg");
   display: flex;
@@ -8,9 +8,11 @@
   height: 100%;
   width: 100%;
 }
-  
-.Home-header {
+
+.header {
   font-size: 45px;
   color: #fff;
   font-weight: 100;
+  margin-top: 20px;
+  margin-bottom: 10px;
 }

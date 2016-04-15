@@ -1,4 +1,4 @@
-.City-container {
+.container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -6,6 +6,14 @@
   max-width: 300px;
 }
 
-.City-button {
+.input {
+  height: 34px;
+  padding: 3px 12px;
+  font-size: 14px;
+}
+
+.button {
   margin: 10px;
+  padding: 6px 12px;
+  font-size: 14px;
 }
