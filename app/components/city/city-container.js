@@ -12,8 +12,13 @@ export default class CityContainer extends React.Component {
   
   handleSubmitCity(e) {
     e.preventDefault();
+
     openWeatherService
       .getCurrentWeatherForCity(this.state.city)
+      .then(resp => console.log(resp));
+
+    openWeatherService
+      .getFiveDayForecast(this.state.city)
       .then(resp => console.log(resp));
   }
   
