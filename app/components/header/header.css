@@ -1,0 +1,12 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(252, 90, 44, 0.89);
+  color: #fff;
+  padding: 5px;
+}
+
+.title {
+  margin: 10px;
+}
