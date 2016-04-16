@@ -1,10 +1,9 @@
 import React from 'react';
+import LoadingContainer from '../loading/loading-container';
 
 function CityForecast(props) {
-  console.log('Weather data', props.weatherData);
-  
   if (props.isLoading) {
-    return (<p> Loading... </p>);
+    return (<LoadingContainer />);
   }
 
   return (
