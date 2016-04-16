@@ -1,6 +1,5 @@
 import React from 'react';
 import City from './city'
-import openWeatherService from '../../services/open-weather';
 
 export default class CityContainer extends React.Component {
   constructor(props) {
@@ -12,17 +11,10 @@ export default class CityContainer extends React.Component {
   
   handleSubmitCity(e) {
     e.preventDefault();
-
-    openWeatherService
-      .getCurrentWeatherForCity(this.state.city)
-      .then(resp => console.log(resp));
-
-    openWeatherService
-      .getFiveDayForecast(this.state.city)
-      .then(resp => console.log(resp));
+    this.context.router.push(`/forecast/${this.state.city}`)
   }
   
-  handleUpdateCity(e) {    
+  handleUpdateCity(e) {
     this.setState({ city: e.target.value });
   }
   
@@ -35,4 +27,8 @@ export default class CityContainer extends React.Component {
       />
     );
   } 
+}
+
+CityContainer.contextTypes = {
+  router: React.PropTypes.object.isRequired
 }
