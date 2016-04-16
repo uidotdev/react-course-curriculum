@@ -1,12 +1,14 @@
 import styles from './main.css';
 import React from 'react';
-import HeaderContainer from '../header/header-container'; 
+import HeaderContainer from '../header/header-container';
 
-export default function renderMain(props) {
-  return (
-    <div className={styles.container}>
-      <HeaderContainer />
-      {props.children}
-    </div>
-  );
+export default class Main extends React.Component {
+  render() {
+    return (
+      <div className={styles.container}>
+        <HeaderContainer />
+        {this.props.children}
+      </div>
+    );
+  }
 }

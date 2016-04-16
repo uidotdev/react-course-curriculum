@@ -1,7 +1,7 @@
 import styles from './city.css';
 import React from 'react';
 
-function renderCity(props) {
+function City(props) {
   const containerClassName = props.orientation === 'vertical' 
     ? styles.containerVertical 
     : styles.containerHorizontal;
@@ -14,9 +14,9 @@ function renderCity(props) {
   );
 }
 
-renderCity.propTypes = {
+City.propTypes = {
   onSubmitCity: React.PropTypes.func.isRequired,    
   onUpdateCity: React.PropTypes.func.isRequired    
 };
 
-export default renderCity;
+export default City;
