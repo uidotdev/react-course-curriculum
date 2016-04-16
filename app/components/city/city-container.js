@@ -11,7 +11,9 @@ export default class CityContainer extends React.Component {
   
   handleSubmitCity(e) {
     e.preventDefault();
-    this.context.router.push(`/forecast/${this.state.city}`)
+    if (this.state.city) {
+      this.context.router.push(`/forecast/${this.state.city}`);  
+    }    
   }
   
   handleUpdateCity(e) {
