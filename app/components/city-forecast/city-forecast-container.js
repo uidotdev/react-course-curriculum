@@ -5,20 +5,28 @@ import openWeatherService from '../../services/open-weather';
 export default class CityForecastContainer extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = { 
+      isLoading: true,
+      weatherData: {} 
+    };
   }
   
   componentDidMount() {
      const city = this.props.location.query.city;
      openWeatherService
       .getCurrentWeatherForCity(city)
-      .then(resp => console.log('Weather', resp))
-      .catch(err => console.warn(err));     
+      .then(resp => this.setState({ 
+        isLoading: false,
+        weatherData: resp.data  
+      }));
   }
 
   render() {
     return (
-      <CityForecast />
+      <CityForecast 
+        isLoading={this.state.isLoading}
+        weatherData={this.state.weatherData}
+      />
     );
   }
   
