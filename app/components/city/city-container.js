@@ -12,7 +12,12 @@ export default class CityContainer extends React.Component {
   handleSubmitCity(e) {
     e.preventDefault();
     if (this.state.city) {
-      this.context.router.push(`/forecast/${this.state.city}`);  
+      this.context.router.push({
+        pathname: `/forecast/${this.state.city}`,
+        state: {
+          cityName: this.state.city
+        }
+      });  
     }    
   }
   

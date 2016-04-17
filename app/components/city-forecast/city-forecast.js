@@ -14,10 +14,12 @@ function CityForecast(props) {
         {props.weatherData.cityName} 
       </h1>
       <div className={styles.dayList}>
-        {props.weatherData.days.map(day =>         
+        {props.weatherData.days.map((day, i) =>         
           <DayForecast 
+            key={i}
             date={day.date}
             iconCode={day.iconCode}
+            onClick={props.onDayClick.bind(null, day)}
           />)}
       </div>
     </div>
@@ -29,7 +31,8 @@ CityForecast.propTypes = {
   weatherData: React.PropTypes.shape({
     cityName: React.PropTypes.string.isRequired,
     days: React.PropTypes.array.isRequired
-  })
+  }),
+  onDayClick: React.PropTypes.func.isRequired
   
 };
 
