@@ -1,23 +1,29 @@
 import React from 'react';
 import CityForecast from './city-forecast';
 import openWeatherService from '../../services/open-weather';
+import responseDataMapper from './response-data-mapper';
  
 export default class CityForecastContainer extends React.Component {
   constructor(props) {
     super(props);
     this.state = { 
       isLoading: true,
-      weatherData: {} 
+      weatherData: {
+        cityName: '',
+        days: []
+      } 
     };
   }
   
   componentDidMount() {
-     const city = this.props.location.query.city;
+     const city = this.props.location.pathname.split('/forecast/')[1];
+     
      openWeatherService
-      .getCurrentWeatherForCity(city)
-      .then(resp => this.setState({ 
+      .getFiveDayForecast(city)
+      .then(resp => responseDataMapper.mapForecastResponse(resp.data))
+      .then(weatherData => this.setState({ 
         isLoading: false,
-        weatherData: resp.data  
+        weatherData: weatherData
       }));
   }
 
