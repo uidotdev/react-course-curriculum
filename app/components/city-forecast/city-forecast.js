@@ -4,8 +4,6 @@ import LoadingContainer from '../loading/loading-container';
 import DayForecast from '../day-forecast/day-forecast';
 
 function CityForecast(props) {
-  console.log('Data', props.weatherData);
-  
   if (props.isLoading) {
     return (<LoadingContainer />);
   }

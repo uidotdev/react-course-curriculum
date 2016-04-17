@@ -1,10 +1,18 @@
+import styles from './day-forecast.css';
 import React from 'react';
+import moment from 'moment';
 
 function DayForecast(props) {
+  const imageStyle = {
+    backgroundImage: `url(/app/images/weather/${props.iconCode}.svg)`
+  };
+  
+  const formattedDate = moment(props.date).format('dddd, MMM DD');
+  
   return (
-    <div>
-      <p>{props.iconCode}</p>      
-      <p>{props.date.toString()}</p>
+    <div className={styles.container}>
+      <div style={imageStyle} className={styles.weatherStatus}></div>      
+      <p className={styles.date}> {formattedDate} </p>
     </div>
   );
 }
