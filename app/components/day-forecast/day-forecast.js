@@ -3,16 +3,14 @@ import React from 'react';
 import moment from 'moment';
 
 function DayForecast(props) {
-  const imageStyle = {
-    backgroundImage: `url(/app/images/weather/${props.iconCode}.svg)`
-  };
+  const imagePath = `./app/images/weather/${props.iconCode}.svg`;
   
   const formattedDate = moment(props.date).format('dddd, MMM DD');
   
   return (
     <div className={styles.container}>
-      <div style={imageStyle} className={styles.weatherStatus}></div>      
-      <p className={styles.date}> {formattedDate} </p>
+      <img className={styles.weatherStatus} src={imagePath} />      
+      <h2 className={`${styles.date} h2`}> {formattedDate} </h2>
     </div>
   );
 }

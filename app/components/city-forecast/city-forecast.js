@@ -14,9 +14,11 @@ function CityForecast(props) {
         {props.weatherData.cityName} 
       </h1>
       <div className={styles.dayList}>
-        <DayForecast 
-          date={props.weatherData.days[0].date}
-          iconCode={props.weatherData.days[0].iconCode}/>
+        {props.weatherData.days.map(day =>         
+          <DayForecast 
+            date={day.date}
+            iconCode={day.iconCode}
+          />)}
       </div>
     </div>
   );
