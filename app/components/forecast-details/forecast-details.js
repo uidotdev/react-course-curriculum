@@ -23,7 +23,7 @@ function ForecastDetails(props) {
 
 ForecastDetails.propTypes = {
   cityName: React.PropTypes.string.isRequired,
-  date: React.PropTypes.instanceOf(Date).isRequired,
+  date: React.PropTypes.string.isRequired,
   iconCode: React.PropTypes.string.isRequired,
   description: React.PropTypes.string.isRequired,
   humidity: React.PropTypes.number.isRequired,

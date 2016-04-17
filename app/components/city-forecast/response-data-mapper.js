@@ -7,7 +7,7 @@ function mapForecastResponse(respData) {
 
 function mapOneDay(day) {
   return {
-    date: new Date(day.dt * 1000),
+    date: new Date(day.dt * 1000).toString(),
     iconCode: day.weather[0].icon,
     description: day.weather[0].description,
     humidity: day.humidity,

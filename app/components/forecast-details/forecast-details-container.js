@@ -5,6 +5,7 @@ export default class ForecastDetailsContainer extends React.Component {
   constructor(props) {
     super(props);
     const routerState = this.props.location.state;
+    
     this.state = {
       cityName: routerState.cityName,
       dayForecastData: routerState.dayForecastData 

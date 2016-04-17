@@ -4,7 +4,7 @@ import moment from 'moment';
 
 function DayForecast(props) {
   const imagePath = `./app/images/weather/${props.iconCode}.svg`;  
-  const formattedDate = moment(props.date).format('dddd, MMM DD');
+  const formattedDate = moment(new Date(props.date)).format('dddd, MMM DD');
   
   return (
     <div className={styles.container} onClick={props.onClick}>
@@ -16,7 +16,7 @@ function DayForecast(props) {
 
 DayForecast.propTypes = {
   iconCode: React.PropTypes.string.isRequired,
-  date: React.PropTypes.instanceOf(Date).isRequired,
+  date: React.PropTypes.string.isRequired,
   onClick: React.PropTypes.func
 };
 
