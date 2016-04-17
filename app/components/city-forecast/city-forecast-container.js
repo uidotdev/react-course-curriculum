@@ -8,6 +8,7 @@ export default class CityForecastContainer extends React.Component {
     super(props);
     this.state = { 
       isLoading: true,
+      cityName: '',
       weatherData: {
         cityName: '',
         days: []
@@ -29,10 +30,9 @@ export default class CityForecastContainer extends React.Component {
 
   render() {
     return (
-      <CityForecast 
+      <CityForecast
         isLoading={this.state.isLoading}
-        weatherData={this.state.weatherData}
-      />
+        weatherData={this.state.weatherData} />
     );
   }
   
