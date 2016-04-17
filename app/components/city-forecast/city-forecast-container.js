@@ -1,7 +1,7 @@
 import React from 'react';
 import CityForecast from './city-forecast';
 import openWeatherService from '../../services/open-weather';
-import responseDataMapper from './response-data-mapper';
+import responseDataMapper from '../../services/response-data-mapper';
  
 export default class CityForecastContainer extends React.Component {
   constructor(props) {
