@@ -1,4 +1,4 @@
-import expect from 'expect.js';
+import { expect } from 'chai';
 
 describe('test environment', () => {
   let a = false;
@@ -8,6 +8,6 @@ describe('test environment', () => {
   });
 
   it('should work', () => {
-    expect(a).to.be(true);
+    expect(a).to.equal(true);
   })
 });
