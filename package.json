@@ -6,7 +6,8 @@
   "scripts": {
     "start": "webpack-dev-server",
     "build": "webpack -p",
-    "lint": "eslint . --ext .js || true"
+    "lint": "eslint . --ext .js || true",
+    "test": "mocha app/*.specs.js --recursive"
   },
   "repository": {
     "type": "git",
@@ -35,7 +36,9 @@
     "eslint": "^2.7.0",
     "eslint-loader": "^1.3.0",
     "eslint-plugin-react": "^4.3.0",
+    "expect.js": "^0.3.1",
     "html-webpack-plugin": "^2.15.0",
+    "mocha": "^2.4.5",
     "style-loader": "^0.13.1",
     "webpack": "^1.12.15",
     "webpack-dev-server": "^1.14.1"
