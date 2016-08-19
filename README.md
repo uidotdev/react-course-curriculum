@@ -6,7 +6,7 @@ React.js Fundamentals Curriculum
 ####For more information on React.js Program, [click here](http://reactjsprogram.com)
 
 ##Objective
-Build a functioning Weather app using the [Open Weather API](http://openweathermap.org/api). The end result of this project can be found [HERE](http://www.reactjsprogram.com/React-Fundamentals-Project). 
+Build a functioning Weather app using the [Open Weather API](http://openweathermap.org/api). The end result of this project can be found [HERE](http://www.reactjsprogram.com/React-Fundamentals-Project).
 
 ## Notes
 The goal here is to give you just enough guidance for you to struggle without drowning. Note that the steps below are just suggestions. The ideal situation is you look at the completed project, then you build it. However, if you're not up for such things, feel free to follow the (vague by design) steps below. If you get stuck, all steps have coinciding branches for you to reference as a last case scenario.
