@@ -1,8 +1,10 @@
 const styles = {
   backgroundCoverImage: {
-    backgroundImage: 'url(app/images/pattern.svg)',
+    backgroundImage: 'url(app/images/sky.png)',
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: 'cover',
     position: 'absolute',
-    marginTop: '80px',
+    // marginTop: '40px',
     height: '100%',
     width: '100%',
   },

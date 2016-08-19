@@ -6,7 +6,7 @@ const Home = React.createClass({
     return (
       <div style={styles.backgroundCoverImage}>
         <div className="col-sm-4 col-sm-offset-4 text-center">
-          <h2 style={{marginTop: 25 + 'px', fontFamily: 'Courier new'}}>Find Your Weather</h2>
+          <h2 style={{marginTop: 25 + 'px', fontFamily: 'Courier new', color: '#fff'}}>Find Your Weather</h2>
           <form>
             <div className="form-group">
               <input className="form-control" type="text" placeholder="Seattle, WA"/>
