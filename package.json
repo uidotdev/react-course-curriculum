@@ -1,19 +1,81 @@
 {
-  "name": "react-fundamentals-curriculum",
+  "name": "cyber-mimes",
   "version": "1.0.0",
-  "description": "Curriculum for React.js Program's React Fundamentals course.",
-  "main": "index.js",
+  "description": "rpg game",
+  "main": "app/web/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "babel-node server.js",
+    "start": "node app/web/server.js",
+    "commit": "git-cz"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ReactjsProgram/react-fundamentals-curriculum.git"
+    "url": "https://github.com/breakfast-mimes/cyber-mimes.git"
   },
-  "author": "Tyler McGinnis <tylermcginnis33@gmail.com> (http://tylermcginnis.com)",
+  "author": "Harp Alex Selim",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ReactjsProgram/react-fundamentals-curriculum/issues"
+    "url": "https://github.com/breakfast-mimes/cyber-mimes/issues"
   },
-  "homepage": "https://github.com/ReactjsProgram/react-fundamentals-curriculum#readme"
+  "homepage": "https://github.com/breakfast-mimes/cyber-mimes#readme",
+  "dependencies": {
+    "axios": "^0.14.0",
+    "babel": "^6.5.2",
+    "babel-core": "^6.16.0",
+    "babel-loader": "^6.2.5",
+    "babel-preset-react": "^6.16.0",
+    "babel-preset-stage-1": "^6.13.0",
+    "bcrypt-nodejs": "0.0.3",
+    "bluebird": "^3.4.6",
+    "body-parser": "^1.15.2",
+    "bootstrap": "^3.3.7",
+    "cors": "^2.8.1",
+    "css-loader": "^0.25.0",
+    "express": "^4.14.0",
+    "express-jwt": "^5.0.0",
+    "express-session": "^1.14.1",
+    "jquery": "^3.1.1",
+    "json-loader": "^0.5.4",
+    "material-ui": "^0.15.4",
+    "neo4j": "^2.0.0-RC1",
+    "neo4j-driver": "^1.0.2",
+    "node-neo4j": "^2.0.3",
+    "react": "^15.3.2",
+    "react-bootstrap": "^0.30.3",
+    "react-dom": "^15.3.2",
+    "react-redux": "^4.4.5",
+    "react-router": "^2.8.1",
+    "react-router-redux": "^4.0.5",
+    "react-sound": "^0.5.2",
+    "redux": "^3.6.0",
+    "redux-form": "^6.0.5",
+    "redux-thunk": "^2.1.0",
+    "request": "^2.75.0",
+    "style-loader": "^0.13.1",
+    "sync-request": "^3.0.1",
+    "underscore": "^1.8.3",
+    "webpack": "^1.13.2",
+    "webpack-dev-middleware": "^1.7.0",
+    "webpack-hot-middleware": "^2.12.2"
+  },
+  "devDependencies": {
+    "babel-core": "^6.16.0",
+    "babel-loader": "^6.2.5",
+    "babel-preset-es2015": "^6.16.0",
+    "commitizen": "^2.8.6",
+    "css-loader": "^0.25.0",
+    "cz-conventional-changelog": "^1.2.0",
+    "file-loader": "^0.9.0",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.13.2"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-conventional-changelog"
+    }
+  }
 }
+
+
