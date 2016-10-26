@@ -1,6 +1,9 @@
 import React from 'react';
 import { render } from 'react-dom';
+var ReactDOM = require('react-dom');
+import routes from './config/routes.js';
 
-import router from './router';
 
-render(router, document.getElementById('app'));
+
+
+ReactDOM.render(routes, document.getElementById('app'));

@@ -1,5 +1,6 @@
 import React from 'react';
-import { Router, Route, IndexRoute } from 'react-router';
+import { Router, Route, IndexRoute, browserHistory} from 'react-router';
+var ReactRouter = require('react-router');
 // import { Provider } from 'react-redux';
 // import store, { history } from './store';
 
@@ -9,8 +10,8 @@ import { Router, Route, IndexRoute } from 'react-router';
 // import Map from './components/map/Map.js';
 import Main from '../components/Main';
 import Home from '../components/Home';
-// import HelloUser from './components/DisplayNames';
-
+import PromptContainer from '../container/PromptContainer';
+// var hashHistory = ReactRouter.hashHistory;
 // const router = (
 //   // <Provider store={store}>
 //     <Router history={history}>
@@ -20,16 +21,15 @@ import Home from '../components/Home';
 // );
 
 var routes = (
-	<Router>
-		<Route path='/' component={Main}> </Route>
-		<Route path='/home' component={Home}> </Route>
+<Router history={browserHistory}>
+	<Route path='/' component={Main}>
+		<IndexRoute header='GitHub Battle' component={Home} />
+		<Route path='/playerOne' header='Player One' component={PromptContainer} />
+		<Route path='/playerTwo/:playerOne' header= 'Player Two' component={PromptContainer} />
+	</Route>
 
-
-	</Router>
+</Router>
 
 )
 
-export default router;
-      // <Route path='/displaynames' component={DisplayNames}>
-      // </Route>
-      // <Route path="/" component={helloWorld}>
+export default routes;
