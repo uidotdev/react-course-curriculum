@@ -1,5 +1,5 @@
 import React from 'react';
-import { Router, Route, IndexRoute, browserHistory} from 'react-router';
+import { Router, Route, IndexRoute, hashHistory} from 'react-router';
 var ReactRouter = require('react-router');
 // import { Provider } from 'react-redux';
 // import store, { history } from './store';
@@ -21,7 +21,7 @@ import PromptContainer from '../container/PromptContainer';
 // );
 
 var routes = (
-<Router history={browserHistory}>
+<Router history={hashHistory}>
 	<Route path='/' component={Main}>
 		<IndexRoute header='GitHub Battle' component={Home} />
 		<Route path='/playerOne' header='Player One' component={PromptContainer} />

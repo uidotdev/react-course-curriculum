@@ -2,47 +2,61 @@ var React = require('react');
 import ReactDOM from 'react-dom';
 import transparentBg from '../styles/index.js'
 import {Link} from 'react-router';
+import Prompt from '../components/Prompt'
 
 var PromptContainer = React.createClass({
+
+//with context type we can access router with passing it down as props
+contextTypes: {
+	router: React.PropTypes.object.isRequired
+},
+
 getInitialState: function() {
 	return {username: ''};
 },
-onChange: function (event) {
+onUpdateUser: function (event) {
 	this.setState({username:event.target.value})
-	console.log('change',event.target.value)
+	console.log('onUpdateUser',event.target.value)
+	
 },
+handleSubmitUser:function (e) {
+	e.preventDefault();
+	var username = this.state.username;
+	this.setState({
+		username: ''
+	})
+	if (this.props.routeParams.playerOne) {
+		
+		this.context.router.push({
+			pathname: '/battle',
+			query: {
+				playerOne:this.props.routeParams.playerOne,
+				playerTwo: this.state.username
+			}
+		//ifit has a playerOne variable, we are on playerTwo route.
+		// So we need go to battle screen on button click
+		})
+	}
+	else {
+		console.log('context',this.context);
+		//else we are playerOne so go to playerTwo screen
+		//you can use push without an object like below if you are not passing in any queries etc.
+		this.context.router.push('/playerTwo/' + this.state.username);	
+	}
+},
+
 render: function () {
 	console.log('this',this);
 
-	return (
-	<div className='jumbotron col-sm-6 col-sm-offset-3 text-center' style={transparentBg}>
-		<h1>{this.props.route.header}</h1>
-	  <div className='col-sm-12'>
-		<form onSubmit={this.onSubmitUser}>
-			<div className='form-group'>
+	 return (
 
-				<input 
-					className='form-control'
-					placeholder='Github username'
-					type='text'
-					onChange={this.onChange}
-					value={this.state.typed}/>
-			</div>
-			<div className="form-group col-sm-4 col-sm-offset-4">
-				
-					<button
-						className="btn btn-block btn-success"
-						type="submit">
-						Continue	
-					</button>
-				
-			</div>
-		</form>
-	  </div>
-
-
-	</div>
-	)
+		<Prompt
+		onSubmitUser={this.handleSubmitUser}
+		onUpdateUser={this.onUpdateUser}
+		header={this.props.route.header}
+		username={this.state.username}
+		/>
+	 )
 }
 
 })
