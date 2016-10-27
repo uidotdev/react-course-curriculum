@@ -11,6 +11,7 @@ var ReactRouter = require('react-router');
 import Main from '../components/Main';
 import Home from '../components/Home';
 import PromptContainer from '../container/PromptContainer';
+import confirmBattleContainer from '../container/confirmBattleContainer';
 // var hashHistory = ReactRouter.hashHistory;
 // const router = (
 //   // <Provider store={store}>
@@ -26,6 +27,7 @@ var routes = (
 		<IndexRoute header='GitHub Battle' component={Home} />
 		<Route path='/playerOne' header='Player One' component={PromptContainer} />
 		<Route path='/playerTwo/:playerOne' header= 'Player Two' component={PromptContainer} />
+		<Route path='/battle' header='BATTLE' component={confirmBattleContainer}/>
 	</Route>
 
 </Router>
