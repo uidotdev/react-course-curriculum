@@ -7,7 +7,7 @@ var Main = React.createClass({
 	render: function () {
 		// console.log('thisMain',this)
 		return (
-			<div>hello from Main!
+			<div>Main
 			{this.props.children}
 			</div>
 		)

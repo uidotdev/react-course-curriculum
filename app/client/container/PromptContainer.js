@@ -26,7 +26,7 @@ handleSubmitUser:function (e) {
 		username: ''
 	})
 	if (this.props.routeParams.playerOne) {
-		
+
 		this.context.router.push({
 			pathname: '/battle',
 			query: {
@@ -36,7 +36,7 @@ handleSubmitUser:function (e) {
 		//ifit has a playerOne variable, we are on playerTwo route.
 		// So we need go to battle screen on button click
 		})
-	}
+	}	
 	else {
 		console.log('context',this.context);
 		//else we are playerOne so go to playerTwo screen
