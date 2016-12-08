@@ -1,4 +1,4 @@
-<img src="http://www.reactjsprogram.com/images/reactjsprogram-500.png" width="250" align="right">
+<img src="https://cloud.githubusercontent.com/assets/2933430/21000144/6e6cfa86-bcd6-11e6-950c-149059841f19.png" width="250" align="right">
 
 React.js Fundamentals Curriculum
 ========
@@ -45,7 +45,7 @@ The next step I take is setting up React Router to handle my routing. Before I j
  * Finish the UI for the Header component.
  * As of right now, my app looks like this (with no actual functionality)
 
-<img src="http://www.reactjsprogram.com/images/reactfundamentals-step4.png" width="400">
+<img src="https://cloud.githubusercontent.com/assets/2933430/21000851/3c99be96-bcda-11e6-8dd9-0812bd769229.png" width="400">
 
 ## Step 5: Wire up the Weather Button
 In this step we're going to write up the button to our weather API, though we'll just log the result from now.
@@ -66,7 +66,7 @@ In this step we're going to write up the button to our weather API, though we'll
  * Now make it so instead of calling the weather API when we click on the "Get Weather" button, go to this /forecast route we just created.
  * As of right now, my app looks like this
 
-<img src="http://www.reactjsprogram.com/images/reactfundamentals-step6.png" width="400">
+<img src="https://cloud.githubusercontent.com/assets/2933430/21000852/3c9a0e50-bcda-11e6-82ae-eba38356eaa0.png" width="400">
 
 ## Step 7: Make /forecast show loading and fetch
 Before we had our API request when the user clicked on the "Get Weather" button. However, in Step 6 we removed that and are instead routing to the /forecast route. Now what we need to do it when someone reaches the /forecast route, show a loading indicator while the component fetches the city data from the weather API.
@@ -80,7 +80,7 @@ Before we had our API request when the user clicked on the "Get Weather" button.
  * At this point the component that becomes active when a user navigates to /forecast should have all the data it needs to render properly. So, make that UI look nice.
  * As of right now, my app looks like this
 
-<img src="http://www.reactjsprogram.com/images/reactfundamentals-step8.png" width="400">
+<img src="https://cloud.githubusercontent.com/assets/2933430/21000853/3c9b2bbe-bcda-11e6-88b8-3619aa319bcd.png" width="400">
 
 ## Step 9: Make each day clickable
 Now we want to make it so you can click on a specific day and we'll be taken to a new route which displays that day's weather information more in depth.
@@ -89,7 +89,7 @@ Now we want to make it so you can click on a specific day and we'll be taken to 
  * Add a click handler to every day that when clicked, will go to the new /detail/SOME-CITY route passing through that specific days data through as state.
  * At this point you should have a new route that looks something like this
 
-<img src="http://www.reactjsprogram.com/images/reactfundamentals-step9.png" width="400">
+<img src="https://cloud.githubusercontent.com/assets/2933430/21000855/3c9e3660-bcda-11e6-8f0e-4fc7d26306a7.png" width="400">
 
 ## Step 10: Finish the UI for the /detail route
 At this point the /detail route should have all the data it needs to render.
@@ -98,9 +98,9 @@ At this point the /detail route should have all the data it needs to render.
 
 The final /detail route should now look like this.
 
-<img src="http://www.reactjsprogram.com/images/reactfundamentals-step10.png" width="400">
+<img src="https://cloud.githubusercontent.com/assets/2933430/21000854/3c9cec88-bcda-11e6-9f94-8912e3dd9956.png" width="400">
 
 ## Congrats!
 If you got through this, great job. Take a look at my code and compare to what we did differently.
 
-<img src='http://www.reactjsprogram.com/images/tyler-mcginnis.png' width="100px" align="right"/> Suggestion or just want to say thanks? You can find me on Twitter at [@tylermcginnis33](http://twitter.com/tylermcginnis33)
+<img src='https://cloud.githubusercontent.com/assets/2933430/21000153/6e9fa846-bcd6-11e6-9e09-2e6bb868f71c.png' width="100px" align="right"/> Suggestion or just want to say thanks? You can find me on Twitter at [@tylermcginnis33](http://twitter.com/tylermcginnis33)
