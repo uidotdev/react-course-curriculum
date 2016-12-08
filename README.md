@@ -103,4 +103,4 @@ The final /detail route should now look like this.
 ## Congrats!
 If you got through this, great job. Take a look at my code and compare to what we did differently.
 
-<img src='https://cloud.githubusercontent.com/assets/2933430/21000153/6e9fa846-bcd6-11e6-9e09-2e6bb868f71c.png' width="100px" align="right"/> Suggestion or just want to say thanks? You can find me on Twitter at [@tylermcginnis33](http://twitter.com/tylermcginnis33)
+<img src='https://cloud.githubusercontent.com/assets/2933430/21000153/6e9fa846-bcd6-11e6-9e09-2e6bb868f71c.png' width="200px" align="left"/> Suggestion or just want to say thanks? You can find me on Twitter at [@tylermcginnis33](http://twitter.com/tylermcginnis33)
