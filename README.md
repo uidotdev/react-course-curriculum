@@ -12,7 +12,7 @@ Build a functioning Weather app using the [Open Weather API](http://openweatherm
 The goal here is to give you just enough guidance for you to struggle without drowning. Note that the steps below are just suggestions. The ideal situation is you look at the completed project, then you build it. However, if you're not up for such things, feel free to follow the (vague by design) steps below. If you get stuck, all steps have coinciding branches for you to reference as a last case scenario.
 
 ##Step 0: Examine the Final Product
- * Head over [HERE](http://www.reactjsprogram.com/React-Fundamentals-Project) and play around with the final project. Think about how you would separate your different components and functionality.
+ * Head over [HERE](http://reactjsprogram.github.io/react-fundamentals-curriculum) and play around with the final project. Think about how you would separate your different components and functionality.
 
 ##Step 1: Set up a HelloWorld Component
 Before I ever start a React app I always create a HelloWorld component just to make sure that I've tied everything together properly. I don't expect you to have all this memorized, but do your best in using proper documentation to wire up everything. If you do get stuck you can refer to the 'step1' branch.
