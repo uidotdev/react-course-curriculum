@@ -1,4 +1,6 @@
 import HtmlWebpackPlugin from 'html-webpack-plugin'
+import path from 'path'
+
 const HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
   template: __dirname + '/app/index.html',
   filename: 'index.html',
@@ -21,5 +23,8 @@ module.exports = {
       }
     ]
   },
-  plugins :[HTMLWebpackPluginConfig]
+  plugins :[HTMLWebpackPluginConfig],
+  resolve: {
+    root: path.resolve('./app'),
+  }
 }

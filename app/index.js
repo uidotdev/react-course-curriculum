@@ -1,13 +1,14 @@
-import React from "react"
-import ReactDOM from "react-dom"
+import React from 'react'
+import ReactDOM from 'react-dom'
+import {Router, Route, IndexRoute, browserHistory} from 'react-router'
+import MainContainer from 'containers/MainContainer'
+import HomeContainer from 'containers/HomeContainer'
 
-function HelloWorld() {
-  return (
-    <div>Hello World!</div>
-  )
-}
-
-ReactDOM.render(
-  <HelloWorld />,
-  document.getElementById('app')
-)
+ReactDOM.render((
+  <Router history={browserHistory}>
+    <Route path='/' component={MainContainer}>
+      <IndexRoute component={HomeContainer} />
+      <Route path='home' component={HomeContainer} />
+    </Route>
+  </Router>
+),  document.getElementById('app'))
