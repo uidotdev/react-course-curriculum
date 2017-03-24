@@ -30,7 +30,7 @@ var GetCityContainer = React.createClass({
     return (
       <GetCity
         direction={this.props.direction}
-        alignself:{this.props.alignself}
+        alignself={this.props.alignself}
         onSubmitCity={this.handleSubmitCity}
         onUpdateCity={this.handleUpdateCity}
         city={this.state.city} />
