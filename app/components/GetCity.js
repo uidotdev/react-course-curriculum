@@ -30,7 +30,7 @@ function getStyles (props) {
     justifyContent: 'center',
     alignItems: 'center',
     maxWidth: 300,
-    alignSelf: 'right'
+    alignSelf: props.alignself || 'right'
   }
 }
 
@@ -50,6 +50,7 @@ function GetCity (props) {
 
 GetCity.propTypes = {
   direction: PropTypes.string,
+  alignself: PropTypes.string,
   onSubmitCity: PropTypes.func.isRequired,
   onUpdateCity: PropTypes.func.isRequired,
   city: PropTypes.string.isRequired
