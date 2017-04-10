@@ -1,9 +1,9 @@
-<img src="https://cloud.githubusercontent.com/assets/2933430/21000144/6e6cfa86-bcd6-11e6-950c-149059841f19.png" width="250" align="right">
+<img src="https://cloud.githubusercontent.com/assets/2933430/24846370/3443ccfc-1d77-11e7-8d1d-dc64d86c3852.png" width="300" align="right">
 
-React.js Fundamentals Curriculum
+Curriculum for React Fundamentals Course
 ========
 
-#### For more information on React.js Program, [click here](http://reactjsprogram.com)
+#### For more information on React Training, [click here](http://reacttraining.com/online)
 
 ## Objective
 Build a functioning Weather app using the [Open Weather API](http://openweathermap.org/api). The end result of this project can be found [HERE](http://reactjsprogram.github.io/react-fundamentals-curriculum). 
@@ -103,4 +103,4 @@ The final /detail route should now look like this.
 ## Congrats!
 If you got through this, great job. Take a look at my code and compare to what we did differently.
 
-<img src='https://cloud.githubusercontent.com/assets/2933430/21000153/6e9fa846-bcd6-11e6-9e09-2e6bb868f71c.png' width="200px" align="left"/> Suggestion or just want to say thanks? You can find me on Twitter at [@tylermcginnis33](http://twitter.com/tylermcginnis33)
+Suggestion or just want to say thanks? You can find me on Twitter at [@tylermcginnis33](http://twitter.com/tylermcginnis33)
