@@ -19,10 +19,11 @@ Before I ever start a React app I always create a HelloWorld component just to m
 
  * Fork this repository then clone your fork
  * npm install the dependencies you'll need
- * Create and configure your .babelrc file
  * Create and configure your webpack.config.js file
+ * Add your babel settings to your package.json file
  * In your app directory create and configure your index.html file
- * In your app directory create and configure your index.js file to render a HelloWorld component
+ * In your app directory create and add a style to your index.css file
+ * In your app directory create and configure your index.js file to render a HelloWorld component including your stylesheet.
  * Start webpack and make sure everything is working
 
 ## Step 2: Let React Router handle Routing
