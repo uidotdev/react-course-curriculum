@@ -1,0 +1,13 @@
+.container {
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.label {
+  font-size: 45px;
+  font-weight: 100;
+}

@@ -1,0 +1,18 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 35px;
+}
+
+.weatherStatus {
+  height: 120px;
+}
+
+.date {
+  font-weight: 200;
+  font-size: 30px;
+  color: #666;
+  margin-top: 20px;
+}
