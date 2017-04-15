@@ -6,7 +6,7 @@ Curriculum for React Fundamentals Course
 #### For more information on React Training, [click here](http://reacttraining.com/online)
 
 ## Objective
-Build a functioning Weather app using the [Open Weather API](http://openweathermap.org/api). The end result of this project can be found [HERE](http://reacttraining.github.io/react-fundamentals-curriculum). 
+Build a functioning Weather app using the [Open Weather API](http://openweathermap.org/api). The end result of this project can be found [HERE](http://reacttraining.github.io/react-fundamentals-curriculum).
 
 ## Notes
 The goal here is to give you just enough guidance for you to struggle without drowning. Note that the steps below are just suggestions. The ideal situation is you look at the completed project, then you build it. However, if you're not up for such things, feel free to follow the (vague by design) steps below. If you get stuck, all steps have coinciding branches for you to reference as a last case scenario.
@@ -25,14 +25,7 @@ Before I ever start a React app I always create a HelloWorld component just to m
  * In your app directory create and configure your index.js file to render a HelloWorld component
  * Start webpack and make sure everything is working
 
-## Step 2: Let React Router handle Routing
-The next step I take is setting up React Router to handle my routing. Before I jump into any real coding, again, I make sure everything is wired up correctly.
-
- * Move your HelloWorld component to a Main.js file (I have mine located in a containers folder)
- * Set up your route configuration file to activate the Main component whenever a user hits the index '/' path of your app.
- * Now instead of rendering <HelloWorld /> to the DOM, render your routes configuration.
-
-## Step 3: Add UI for Home
+## Step 2: Add UI for Home
 
  * Create a Home component and set it to the IndexRoute in your route configuration.
  * At this point when you go to localhost:8080 you should see any UI the Main component spits out as well as any UI the Home component spits out.
