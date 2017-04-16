@@ -118,3 +118,11 @@ body {
   .weather {
     height: 130px;
   }
+
+.description-container {
+    font-size: 34px;
+    font-weight: 100;
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+}

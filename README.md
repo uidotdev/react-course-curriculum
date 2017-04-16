@@ -81,7 +81,7 @@ Now we want to make it so you can click on a specific day and we'll be taken to 
 
 <img src="https://cloud.githubusercontent.com/assets/2933430/21000855/3c9e3660-bcda-11e6-8f0e-4fc7d26306a7.png" width="400">
 
-## Step 10: Finish the UI for the /detail route
+## Step 9: Finish the UI for the /detail route
 At this point the /detail route should have all the data it needs to render.
 
  * Finish the app by finishing the UI for the /detail route.
