@@ -90,6 +90,11 @@ The final /detail route should now look like this.
 
 <img src="https://cloud.githubusercontent.com/assets/2933430/21000854/3c9cec88-bcda-11e6-9f94-8912e3dd9956.png" width="400">
 
+## Step 10: Build for production and host it
+
+ * Configure your webpack.config.js settings to build for production.
+ * Host your app.
+
 ## Congrats!
 If you got through this, great job. Take a look at my code and compare to what we did differently.
 
