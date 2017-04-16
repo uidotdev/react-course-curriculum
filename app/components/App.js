@@ -10,7 +10,6 @@ class App extends React.Component {
           <ZipCode
             direction='row'
             onSubmitZipcode={function(){}}
-            onUpdateZipcode={function(){}}
             zipcode={123} />
         </div>
         <div className='home-container' style={{backgroundImage: "url('app/images/pattern.svg')"}}>
@@ -18,7 +17,6 @@ class App extends React.Component {
           <ZipCode
             direction='column'
             onSubmitZipcode={function(){}}
-            onUpdateZipcode={function(){}}
             zipcode={123} />
         </div>
       </div>
