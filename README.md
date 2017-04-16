@@ -66,7 +66,7 @@ Before we had our API request when the user clicked on the "Get Weather" button.
  * When the request comes back, console.log that data and set loading to false.
  * By this point when your user goes to /forecast, they should see a loading screen then when the loading screen goes away they should see the forecast data in the console.
 
-## Step 8: Finish the UI for /forecast
+## Step 7: Finish the UI for /forecast
  * At this point the component that becomes active when a user navigates to /forecast should have all the data it needs to render properly. So, make that UI look nice.
  * As of right now, my app looks like this
 

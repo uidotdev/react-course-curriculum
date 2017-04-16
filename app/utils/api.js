@@ -33,7 +33,7 @@ function getCurrentWeather (city) {
     })
 }
 
-function getForcast (city) {
+function getForecast (city) {
   var queryStringData = getQueryStringData(city);
   var url = prepUrl('forecast/daily', queryStringData)
 
@@ -45,5 +45,5 @@ function getForcast (city) {
 
 module.exports = {
   getCurrentWeather: getCurrentWeather,
-  getForcast: getForcast
+  getForecast: getForecast
 };
