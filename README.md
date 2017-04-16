@@ -72,7 +72,7 @@ Before we had our API request when the user clicked on the "Get Weather" button.
 
 <img src="https://cloud.githubusercontent.com/assets/2933430/21000853/3c9b2bbe-bcda-11e6-88b8-3619aa319bcd.png" width="400">
 
-## Step 9: Make each day clickable
+## Step 8: Make each day clickable
 Now we want to make it so you can click on a specific day and we'll be taken to a new route which displays that day's weather information more in depth.
  * Create a new /detail/SOME-CITY route
  * Create the component(s) that are going to be active when that route is matched.
