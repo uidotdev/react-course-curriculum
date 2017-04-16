@@ -58,7 +58,7 @@ In this step we're going to write up the button to our weather API, though we'll
 
 <img src="https://cloud.githubusercontent.com/assets/2933430/21000852/3c9a0e50-bcda-11e6-82ae-eba38356eaa0.png" width="400">
 
-## Step 7: Make /forecast show loading and fetch
+## Step 6: Make /forecast show loading and fetch
 Before we had our API request when the user clicked on the "Get Weather" button. However, in Step 6 we removed that and are instead routing to the /forecast route. Now what we need to do it when someone reaches the /forecast route, show a loading indicator while the component fetches the city data from the weather API.
 
  * When someone goes to /forecast, have that component that becomes active fetch the forecast for the specific city which should probably be a route parameter.
