@@ -1,9 +1,9 @@
-<img src="https://cloud.githubusercontent.com/assets/2933430/24846370/3443ccfc-1d77-11e7-8d1d-dc64d86c3852.png" width="300" align="right">
+<img src="https://tylermcginnis.com/tylermcginnis_glasses-300.png" width="300" align="right">
 
 Curriculum for React Fundamentals Course
 ========
 
-#### For more information on React Training, [click here](http://reacttraining.com/online)
+#### For more information on TylerMcGinnis.com, [click here](http://tylermcginnis.com)
 
 ## Objective
 Build a functioning Weather app using the [Open Weather API](http://openweathermap.org/api). The end result of this project can be found [HERE](http://artist-submarine-48713.netlify.com/).
