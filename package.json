@@ -1,0 +1,41 @@
+{
+  "name": "react-fundamentals-curriculum",
+  "version": "1.0.0",
+  "description": "<img src=\"https://tylermcginnis.com/tylermcginnis_glasses-300.png\" width=\"300\" align=\"right\">",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --open",
+    "create": "webpack"
+  },
+  "babel": {
+    "presets": [
+      "env",
+      "react"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AWillForAWay/react-fundamentals-curriculum.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AWillForAWay/react-fundamentals-curriculum/issues"
+  },
+  "homepage": "https://github.com/AWillForAWay/react-fundamentals-curriculum#readme",
+  "dependencies": {
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^0.28.9",
+    "html-webpack-plugin": "^2.30.1",
+    "style-loader": "^0.20.1",
+    "webpack": "^3.11.0",
+    "webpack-dev-server": "^2.11.1"
+  }
+}
