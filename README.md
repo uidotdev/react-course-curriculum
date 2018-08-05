@@ -45,7 +45,7 @@ In this step we're going to write up the button to our weather API, though we'll
  * We're going to be querying the weather API for two types of data. A specific city's current weather, and the 5 day forecast for a specific city.
  * Those two endpoints are,
       Current Weather: http://api.openweathermap.org/data/2.5/weather?q=CITY-NAME&type=accurate&APPID=YOUR-API-KEY
-      5 Day Forecast: http://api.openweathermap.org/data/2.5/forecast/daily?q=CITY-NAME&type=accurate&APPID=YOUR-API-KEY&cnt=5
+      5 Day Forecast: http://api.openweathermap.org/data/2.5/forecast?q=CITY-NAME&type=accurate&APPID=YOUR-API-KEY&cnt=5
  * Tie up the "Get Weather" button to be able to grab whatever city is in the input field's current weather and log it to the console.
  * Once the previous step is working, also create the functionality for the 5 day forecast request and test is by hooking it up to the "Get Weather" button. Once it works, change it back to get the current weather.
  * If you get stuck with the API check out the "step5" branch. My code is located under /app/utils/api.js
