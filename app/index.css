@@ -9,3 +9,14 @@
   font-size: 32px;
   display:flex;
 }
+
+
+.main {
+  margin-top:100px;
+  margin-left:700px;
+  margin-right:700px;
+
+  display:flex;
+  justify-content: center;
+  flex-direction:column;
+}
