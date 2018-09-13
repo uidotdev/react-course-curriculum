@@ -1,0 +1,43 @@
+{
+  "name": "react-fundamentals-curriculum",
+  "version": "1.0.0",
+  "description": "<img src=\"https://tylermcginnis.com/tylermcginnis_glasses-300.png\" width=\"300\" align=\"right\">",
+  "main": "index.js",
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ]
+  },
+  "dependencies": {
+    "react": "^16.5.0",
+    "react-dom": "^16.5.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.1",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.2",
+    "css-loader": "^1.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "style-loader": "^0.23.0",
+    "webpack": "^4.18.1",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.8"
+  },
+  "scripts": {
+    "start": "webpack-dev-server --open"
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/timothyyjoo/react-fundamentals-curriculum.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/timothyyjoo/react-fundamentals-curriculum/issues"
+  },
+  "homepage": "https://github.com/timothyyjoo/react-fundamentals-curriculum#readme"
+}
