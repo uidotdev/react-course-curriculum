@@ -5,13 +5,22 @@ module.exports = {
   entry: "./app/index.js",
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: "index_bundle.js"
+    filename: "index_bundle.js",
+    publicPath: '/'
   },
   module: {
-      rules: [
-        {test: /\.(js)$/, use: "babel-loader"},
-        {test: /\css$/, use: ['style-loader', 'css-loader']}
+  rules: [
+    {test: /\.(js)$/, use: 'babel-loader'},
+    {test: /\.css$/,
+        use: [
+          'style-loader',
+          'css-loader'
       ]
+    }
+  ]
+},
+  devServer: {
+    historyApiFallback:true
   },
   plugins: [
     new HtmlWebpackPlugin({
