@@ -1,7 +1,9 @@
 
 
-
-
+.home{
+  background-image: url("/app/images/pattern.svg");
+  height:100%;
+}
 
 .header-style {
   height: 50px;
@@ -15,7 +17,7 @@
   margin-top:100px;
   margin-left:700px;
   margin-right:700px;
-
+  margin-bottom:500px;
   display:flex;
   justify-content: center;
   flex-direction:column;

@@ -1,14 +1,19 @@
 var React = require('react')
 var Header = require('./Header')
 
+const styles = {
+  fontSize: "32px",
+  color: "white"
+}
+
 
 class Home extends React.Component {
   render() {
     return(
-      <div>
+      <div className="home">
         <Header />
         <div className="main">
-          <p>Enter a City & State</p>
+          <p style={styles}>Enter a City & State</p>
           <input
             id="location"
             placeholder="City & State"
