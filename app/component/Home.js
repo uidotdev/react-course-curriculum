@@ -1,5 +1,7 @@
-var React = require('react')
-var Header = require('./Header')
+var React = require('react');
+var Header = require('./Header');
+var PropTypes = require('prop-types');
+
 
 const styles = {
   fontSize: "32px",
