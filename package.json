@@ -10,6 +10,7 @@
     ]
   },
   "dependencies": {
+    "prop-types": "^15.6.2",
     "react": "^16.5.0",
     "react-dom": "^16.5.0"
   },
@@ -27,7 +28,6 @@
   },
   "scripts": {
     "start": "webpack-dev-server --open"
-
   },
   "repository": {
     "type": "git",
