@@ -8,14 +8,22 @@ const styles = {
   color: "white"
 }
 
+function parseInput(input) {
+  if (input.includes(" ")) {
+    let converted = input.split(" ")
+    let inserted = converted[0] + "%20" + converted[1]
+    return inserted
+  } else {
+    return input
+  }
+}
 
 class Home extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      city: null,
-      state: null
+      city: null
     }
 
     this.handleChange = this.handleChange.bind(this);
@@ -25,12 +33,12 @@ class Home extends React.Component {
 
   handleChange(e) {
     e.preventDefault();
-    let input = e.target.value.split('');
-
+    let input = e.target.value;
+    //parseInput return string to use as query params in get request
+    console.log(parseInput(input));
     this.setState(function() {
       return {
-        city: input[0],
-        state: input[1]
+        city: input
       }
     })
 
@@ -40,13 +48,12 @@ class Home extends React.Component {
       <div className="home">
         <Header />
         <div className="main">
-          <p style={styles}>Enter a City & State</p>
+          <p style={styles}>Enter a City</p>
           <input
             id="location"
-            placeholder="City & State"
+            placeholder="City"
             type="text"
             autoComplete="off"
-            value="Enter City & State"
             onChange={this.handleChange}/>
           <button
             className="button"
