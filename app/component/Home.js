@@ -45,7 +45,9 @@ class Home extends React.Component {
             id="location"
             placeholder="City & State"
             type="text"
-            autoComplete="off"/>
+            autoComplete="off"
+            value="Enter City & State"
+            onChange={this.handleChange}/>
           <button
             className="button"
             type="submit"
