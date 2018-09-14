@@ -66,10 +66,10 @@ class Home extends React.Component {
     )
   }
 }
-
-Home.propTypes = {
-  city: PropTypes.string.isRequired,
-  state: PropTypes.string.isRequired
-}
+//
+// Home.propTypes = {
+//   city: PropTypes.string.isRequired,
+//   state: PropTypes.string.isRequired
+// }
 
 module.exports = Home
