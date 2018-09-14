@@ -1,4 +1,27 @@
+.header-bar-button {
+  background-color: lightgreen;
+  border-radius: 10px;
+  margin: 10px;
+  width:200px;
+}
 
+.header-bar-button:hover:enabled {
+  background:
+  linear-gradient(white, #0a0a0a);
+  color: #fff;
+  text-decoration: none;
+}
+
+.header-input-form {
+  border-radius: 10px;
+  margin: 10px;
+  width:200px;
+}
+
+.header-content-style {
+  margin:15px;
+  color: white;
+}
 
 .home{
   background-image: url("/app/images/pattern.svg");
@@ -6,18 +29,22 @@
 }
 
 .header-style {
-  height: 50px;
+  height: 60px;
   background: darkorange;
-  font-size: 32px;
+  font-size: 28px;
   display:flex;
+  justify-content: space-between;
 }
 
+.search-header {
+  display:flex;
+}
 
 .main {
   margin-top:100px;
   margin-left:700px;
   margin-right:700px;
-  margin-bottom:500px;
+  margin-bottom:700px;
   display:flex;
   justify-content: center;
   flex-direction:column;
