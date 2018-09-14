@@ -29,7 +29,7 @@ class Home extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
   }
-
+//what to do with this componentDidMount? is it necessary? 
   componentDidMount() {
     api.getCurrentWeather(this.state.city)
       .then(function (data) {
@@ -43,17 +43,17 @@ class Home extends React.Component {
     e.preventDefault();
     let input = e.target.value;
 
-    //parseInput return string to use as query params in get request
     this.setState(function() {
       return {
         city: input
       }
-    }, console.log(this.state))
+    })
   }
 
   handleSubmit(e) {
     e.preventDefault();
-    // console.log(this.props)
+    //this is where i format the form value to prepare it for the api get request?
+    // call axios.all that wraps getCurrentWeather and getFiveDayForecast passing the formatted value as an argument, then get the data response, then map the data to home component state which will then be passed as a props to the Weather component.
   }
 
 
@@ -73,7 +73,6 @@ class Home extends React.Component {
             <button
               className="button"
               type="submit"
-              onSubmit={this.handleSubmit}
               >
               Get Weather
             </button>
