@@ -10,6 +10,31 @@ const styles = {
 
 
 class Home extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      city: null,
+      state: null
+    }
+
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+
+
+  handleChange(e) {
+    e.preventDefault();
+    let input = e.target.value.split('');
+
+    this.setState(function() {
+      return {
+        city: input[0],
+        state: input[1]
+      }
+    })
+
+  }
   render() {
     return(
       <div className="home">
