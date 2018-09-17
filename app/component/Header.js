@@ -14,7 +14,7 @@ class Header extends React.Component {
             type="text"
             autoComplete="off"/>
           <button
-            className="button"
+            className="header-bar-button"
             type="submit"
             >
             Get Weather

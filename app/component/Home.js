@@ -1,9 +1,15 @@
 var React = require('react');
 var Header = require('./Header');
 var PropTypes = require('prop-types');
-var api = require('../utils/api')
+var axios = require('axios')
+var config = require('../../apiKeys')
+var ReactRouter = require('react-router-dom')
+var Link = ReactRouter.Link
+
+
 
 const styles = {
+  marginLeft: "20px",
   fontSize: "32px",
   color: "white"
 }
@@ -18,24 +24,24 @@ function parseInput(input) {
   }
 }
 
+
+
+
+
 class Home extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      city: null
+      city: null,
+      weatherData: []
     }
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
   }
-//what to do with this componentDidMount? is it necessary? 
-  componentDidMount() {
-    api.getCurrentWeather(this.state.city)
-      .then(function (data) {
-        console.log(data)
-      })
-  }
+
+
 
 
 
@@ -47,11 +53,31 @@ class Home extends React.Component {
       return {
         city: input
       }
-    })
+    });
   }
 
   handleSubmit(e) {
     e.preventDefault();
+    city = this.state.city
+    function getCurrentWeather(city) {
+      return axios.get("http://api.openweathermap.org/data/2.5/weather?q="+ city + `&type=accurate&APPID=${config.apiKey}`)
+        .then(function(response) {
+          return(response.data)
+        })
+    }
+    function getFiveDayForecast(city) {
+      return axios.get("http://api.openweathermap.org/data/2.5/forecast?q=" + city + `,us&mode=XML&APPID=${config.apiKey}&cnt=5`)
+        .then(function(response) {
+          return(response.data)
+        })
+    }
+    axios.all([getCurrentWeather(city), getFiveDayForecast(city)])
+      .then(axios.spread(function(currentWeatherResponse, fiveDayResponse) {
+        this.setState({weatherData: [...this.state.weatherData, currentWeatherResponse]})
+        var fiveDay = this.state.weatherData.concat(fiveDayResponse)
+        this.setState({weatherData: fiveDay})
+
+      }));
     //this is where i format the form value to prepare it for the api get request?
     // call axios.all that wraps getCurrentWeather and getFiveDayForecast passing the formatted value as an argument, then get the data response, then map the data to home component state which will then be passed as a props to the Weather component.
   }
