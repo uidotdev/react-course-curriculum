@@ -4,9 +4,12 @@ var PropTypes = require('prop-types');
 var axios = require('axios')
 var config = require('../../apiKeys')
 var ReactRouter = require('react-router-dom')
+var Router = ReactRouter.BrowserRouter;
+var Route = ReactRouter.Route;
 var Link = ReactRouter.Link
-
-
+var Forecast = require('./Forecast')
+var Routes = require('./Routes')
+var Redirect = ReactRouter.Redirect;
 
 const styles = {
   marginLeft: "20px",
@@ -34,16 +37,13 @@ class Home extends React.Component {
 
     this.state = {
       city: null,
-      weatherData: []
+      weatherData: [],
+      fireRedirect: false
     }
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
   }
-
-
-
-
 
   handleChange(e) {
     e.preventDefault();
@@ -57,6 +57,7 @@ class Home extends React.Component {
   }
 
   handleSubmit(e) {
+    var self = this;
     e.preventDefault();
     city = this.state.city
     function getCurrentWeather(city) {
@@ -73,38 +74,43 @@ class Home extends React.Component {
     }
     axios.all([getCurrentWeather(city), getFiveDayForecast(city)])
       .then(axios.spread(function(currentWeatherResponse, fiveDayResponse) {
-        this.setState({weatherData: [...this.state.weatherData, currentWeatherResponse]})
-        var fiveDay = this.state.weatherData.concat(fiveDayResponse)
-        this.setState({weatherData: fiveDay})
-
+        self.setState({ weatherData: [...self.state.weatherData, currentWeatherResponse] })
+        self.setState({ weatherData: [...self.state.weatherData, fiveDayResponse]})
       }));
+    this.setState( { fireRedirect: true })
     //this is where i format the form value to prepare it for the api get request?
     // call axios.all that wraps getCurrentWeather and getFiveDayForecast passing the formatted value as an argument, then get the data response, then map the data to home component state which will then be passed as a props to the Weather component.
   }
 
 
   render() {
+    const { fireRedirect } = this.state.fireRedirect
     return(
-      <div className="home">
-        <Header />
-        <div className="main">
-          <p style={styles}>Enter a City</p>
-          <form className="column" onSubmit={this.handleSubmit}>
-            <input
-              id="location"
-              placeholder="City"
-              type="text"
-              autoComplete="off"
-              onChange={this.handleChange}/>
-            <button
-              className="button"
-              type="submit"
-              >
-              Get Weather
-            </button>
-          </form>
+      <Router>
+        <div className="home">
+          <Header />
+          <div className="main">
+            <p style={styles}>Enter a City</p>
+            <form className="column" onSubmit={this.handleSubmit}>
+              <input
+                id="location"
+                placeholder="City"
+                type="text"
+                autoComplete="off"
+                onChange={this.handleChange}/>
+              <button
+                className="button"
+                type="submit"
+                >
+                Get Weather
+              </button>
+              {fireRedirect && (
+                <Redirect to={"/forecast" + this.state.weatherData} />
+              )}
+            </form>
+          </div>
         </div>
-      </div>
+      </Router>
     )
   }
 }
