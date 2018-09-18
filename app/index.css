@@ -65,3 +65,22 @@
   font-size: 16px;
   width: 80%
 }
+
+
+.weather-by-day {
+  display: flex;
+  justify-content: center;
+  flex-direction: space-between;
+}
+
+.weather-container {
+  margin: 25px;
+  border: 2px;
+  border-color: orange;
+}
+
+.weather {
+  height: 100px;
+  width: 100px;
+  margin-left: 20px;
+}

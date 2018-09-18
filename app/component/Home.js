@@ -45,8 +45,7 @@ class Home extends React.Component {
     let input = e.target.value.split(' ,');
     this.setState(function() {
       return {
-        city: input[0],
-        state: input[1]
+        city: input
       }
     });
   };
@@ -75,8 +74,9 @@ class Home extends React.Component {
       .then(() => {
         this.props.history.push({
           pathname: '/forecast',
-          search: `?forecast?city=${this.state.city},${this.state.state}`,
-          state: {data: this.state.weatherData}
+          search: `?forecast?city=${this.state.city}`,
+          state: {
+              data: this.state.weatherData}
         })
       });
     };
