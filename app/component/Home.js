@@ -6,15 +6,15 @@ var config = require('../../apiKeys')
 var ReactRouter = require('react-router-dom')
 var Router = ReactRouter.BrowserRouter;
 var Route = ReactRouter.Route;
-var Link = ReactRouter.Link
-var Forecast = require('./Forecast')
+var Link = ReactRouter.Link;
+var Forecast = require('./Forecast');
 var Redirect = ReactRouter.Redirect;
 
 const styles = {
   marginLeft: "20px",
   fontSize: "32px",
   color: "white"
-}
+};
 
 function parseInput(input) {
   if (input.includes(" ")) {
@@ -24,7 +24,7 @@ function parseInput(input) {
   } else {
     return input
   }
-}
+};
 
 class Home extends React.Component {
   constructor(props) {
@@ -33,11 +33,11 @@ class Home extends React.Component {
     this.state = {
       city: null,
       weatherData: []
-    }
+    };
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
-  }
+  };
 
   handleChange(e) {
     e.preventDefault();
@@ -48,25 +48,24 @@ class Home extends React.Component {
         city: input
       }
     });
-  }
+  };
 
   handleSubmit(e) {
-    //var self = this;
     e.preventDefault();
-
     city = this.state.city
+
     function getCurrentWeather(city) {
       return axios.get("http://api.openweathermap.org/data/2.5/weather?q="+ city + `&type=accurate&APPID=${config.apiKey}`)
         .then(function(response) {
           return(response.data)
         })
-    }
+      };
     function getFiveDayForecast(city) {
       return axios.get("http://api.openweathermap.org/data/2.5/forecast?q=" + city + `,us&mode=XML&APPID=${config.apiKey}&cnt=5`)
         .then(function(response) {
           return(response.data)
         })
-    }
+      };
     axios.all([getCurrentWeather(city), getFiveDayForecast(city)])
       .then(axios.spread((currentWeatherResponse, fiveDayResponse) => {
         this.setState({ weatherData: [...this.state.weatherData, currentWeatherResponse] })
@@ -77,11 +76,8 @@ class Home extends React.Component {
           pathname: '/forecast',
           state: {data: this.state.weatherData}
         })
-      })
-    //this is where i format the form value to prepare it for the api get request?
-    // call axios.all that wraps getCurrentWeather and getFiveDayForecast passing the formatted value as an argument, then get the data response, then map the data to home component state which will then be passed as a props to the Weather component.
-  }
-
+      });
+    };
 
   render() {
     console.log(this.state)
@@ -110,11 +106,7 @@ class Home extends React.Component {
       </Router>
     )
   }
-}
-//
-// Home.propTypes = {
-//   city: PropTypes.string.isRequired,
-//   state: PropTypes.string.isRequired
-// }
+};
+
 
 module.exports = Home
