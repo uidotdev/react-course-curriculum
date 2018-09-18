@@ -16,15 +16,15 @@ const styles = {
   color: "white"
 };
 
-function parseInput(input) {
-  if (input.includes(" ")) {
-    let converted = input.split(" ")
-    let inserted = converted[0] + "%20" + converted[1]
-    return inserted
-  } else {
-    return input
-  }
-};
+// function parseInput(input) {
+//   if (input.includes(" ")) {
+//     let converted = input.split(" ")
+//     let inserted = converted[0] + "%20" + converted[1]
+//     return inserted
+//   } else {
+//     return input
+//   }
+// };
 
 class Home extends React.Component {
   constructor(props) {
@@ -32,6 +32,7 @@ class Home extends React.Component {
 
     this.state = {
       city: null,
+      state: null,
       weatherData: []
     };
 
@@ -41,11 +42,11 @@ class Home extends React.Component {
 
   handleChange(e) {
     e.preventDefault();
-    let input = e.target.value;
-
+    let input = e.target.value.split(' ,');
     this.setState(function() {
       return {
-        city: input
+        city: input[0],
+        state: input[1]
       }
     });
   };
@@ -74,13 +75,14 @@ class Home extends React.Component {
       .then(() => {
         this.props.history.push({
           pathname: '/forecast',
+          search: `?forecast?city=${this.state.city},${this.state.state}`,
           state: {data: this.state.weatherData}
         })
       });
     };
 
   render() {
-    console.log(this.state)
+
     return(
       <Router>
         <div className="home">
