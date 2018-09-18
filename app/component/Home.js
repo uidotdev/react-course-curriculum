@@ -32,8 +32,7 @@ class Home extends React.Component {
 
     this.state = {
       city: null,
-      weatherData: [],
-      fireRedirect: false
+      weatherData: []
     }
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -52,8 +51,9 @@ class Home extends React.Component {
   }
 
   handleSubmit(e) {
-    var self = this;
+    //var self = this;
     e.preventDefault();
+
     city = this.state.city
     function getCurrentWeather(city) {
       return axios.get("http://api.openweathermap.org/data/2.5/weather?q="+ city + `&type=accurate&APPID=${config.apiKey}`)
@@ -68,12 +68,15 @@ class Home extends React.Component {
         })
     }
     axios.all([getCurrentWeather(city), getFiveDayForecast(city)])
-      .then(axios.spread(function(currentWeatherResponse, fiveDayResponse) {
-        self.setState({ weatherData: [...self.state.weatherData, currentWeatherResponse] })
-        self.setState({ weatherData: [...self.state.weatherData, fiveDayResponse]})
+      .then(axios.spread((currentWeatherResponse, fiveDayResponse) => {
+        this.setState({ weatherData: [...this.state.weatherData, currentWeatherResponse] })
+        this.setState({ weatherData: [...this.state.weatherData, fiveDayResponse]})
       }))
       .then(() => {
-        this.setState( { fireRedirect: true })
+        this.props.history.push({
+          pathname: '/forecast',
+          state: {data: this.state.weatherData}
+        })
       })
     //this is where i format the form value to prepare it for the api get request?
     // call axios.all that wraps getCurrentWeather and getFiveDayForecast passing the formatted value as an argument, then get the data response, then map the data to home component state which will then be passed as a props to the Weather component.
@@ -82,10 +85,6 @@ class Home extends React.Component {
 
   render() {
     console.log(this.state)
-    const { fireRedirect } = this.state.fireRedirect
-    {fireRedirect && (
-      <Redirect to={"/forecast"} />
-    )}
     return(
       <Router>
         <div className="home">
