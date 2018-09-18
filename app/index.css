@@ -49,3 +49,19 @@
   justify-content: center;
   flex-direction:column;
 }
+
+.column {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  align-items: center;
+}
+
+.column input {
+  border-radius: 3px;
+  margin: 10px 0;
+  padding: 5px;
+  border: 1px solid rgba(0,0,0,0.43);
+  font-size: 16px;
+  width: 80%
+}
