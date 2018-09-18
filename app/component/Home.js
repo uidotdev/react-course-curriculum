@@ -8,7 +8,6 @@ var Router = ReactRouter.BrowserRouter;
 var Route = ReactRouter.Route;
 var Link = ReactRouter.Link
 var Forecast = require('./Forecast')
-
 var Redirect = ReactRouter.Redirect;
 
 const styles = {
@@ -26,10 +25,6 @@ function parseInput(input) {
     return input
   }
 }
-
-
-
-
 
 class Home extends React.Component {
   constructor(props) {
@@ -76,15 +71,21 @@ class Home extends React.Component {
       .then(axios.spread(function(currentWeatherResponse, fiveDayResponse) {
         self.setState({ weatherData: [...self.state.weatherData, currentWeatherResponse] })
         self.setState({ weatherData: [...self.state.weatherData, fiveDayResponse]})
-      }));
-    this.setState( { fireRedirect: true })
+      }))
+      .then(() => {
+        this.setState( { fireRedirect: true })
+      })
     //this is where i format the form value to prepare it for the api get request?
     // call axios.all that wraps getCurrentWeather and getFiveDayForecast passing the formatted value as an argument, then get the data response, then map the data to home component state which will then be passed as a props to the Weather component.
   }
 
 
   render() {
+    console.log(this.state)
     const { fireRedirect } = this.state.fireRedirect
+    {fireRedirect && (
+      <Redirect to={"/forecast"} />
+    )}
     return(
       <Router>
         <div className="home">
@@ -104,9 +105,6 @@ class Home extends React.Component {
                 >
                 Get Weather
               </button>
-              {fireRedirect && (
-                <Redirect to={"/forecast" + this.state.weatherData} />
-              )}
             </form>
           </div>
         </div>
