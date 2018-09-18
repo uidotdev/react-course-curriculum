@@ -8,7 +8,7 @@ var Router = ReactRouter.BrowserRouter;
 var Route = ReactRouter.Route;
 var Link = ReactRouter.Link
 var Forecast = require('./Forecast')
-var Routes = require('./Routes')
+
 var Redirect = ReactRouter.Redirect;
 
 const styles = {

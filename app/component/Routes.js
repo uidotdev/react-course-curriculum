@@ -8,7 +8,7 @@ var Home = require("./Home")
 
 
 
-const Routes = () => (
+const routes = () => (
   <Router>
     <Route exact path="/" component={Home} />
     <Route path="/forecast" component={Forecast}/>
@@ -16,4 +16,4 @@ const Routes = () => (
 )
 
 
-module.exports = Routes;
+module.exports = routes;
