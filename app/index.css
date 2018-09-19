@@ -86,10 +86,26 @@
 }
 
 .main-details-container {
-  display:flex;
-  justify-content: center;
-}
+  margin-left: 38%;
+  margin-right: 38%;
+  text-align:center;
+ }
 
 .details-box {
+  display: block;
+  text-align: center;
+}
+
+#detail-header{
+  font-size: 24px;
+}
+
+.weather-img {
+  height: 100px;
+  width: 100px;
+}
+
+.header-form {
+  display: flex;
 
 }

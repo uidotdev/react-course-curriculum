@@ -1,6 +1,8 @@
 var React = require('react')
 var Helper = require('../utils/Helper')
 var Header = require('./Header')
+var Link = require('react-router-dom').Link
+
 
 class Interval extends React.Component {
   constructor(props) {
@@ -17,18 +19,31 @@ class Interval extends React.Component {
 
 
   render() {
-    var date = this.state.weather.dt
-    var formatted = Helper.parseDate(date)
-    var kelvin = this.state.weather.main.temp
-    var temp = Math.round(Helper.parseTemp(kelvin))
-    console.log(this.state.weather)
+    var data = this.state.weather
+    var formatted = Helper.parseDate(data.dt)
+    var temp = Math.round(Helper.parseTemp(data.main.temp))
+    var min = Math.round(Helper.parseTemp(data.main.temp_min))
+    var weatherData = data.weather[0]
+    let icon = weatherData.icon
     return(
       <div>
         <Header />
           <div className='main-details-container'>
-            <h1>Additional Weather Details</h1>
+            <h1>Additional Weather Details for {formatted}</h1>
               <div className="details-box">
-                
+                  <img
+                    className="weather-img"
+                    src={'../app/images/weather-icons/' + icon + '.svg'} alt="Weather"
+                  />
+                  <p id="detail-header">In Depth Weather Details </p>
+                  <p>Conditions: {weatherData.main} Skies</p>
+                  <p>Max Temp: {temp}</p>
+                  <p>Min Temp: {min}</p>
+                  <p>Humidity: {data.main.humidity}</p>
+                  <p>Wind Speed: {data.wind.speed} mph</p>
+                  <button onClick={this.props.history.goBack}>
+                    Go Back To Summary
+                  </button>
               </div>
           </div>
       </div>

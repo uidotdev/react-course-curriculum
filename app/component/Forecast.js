@@ -60,9 +60,8 @@ function WeatherContainer (props) {
             data: data
           }
         }} >
-          Get More details
+          Get More Details
         </Link>
-
     </div>
   )
 }
