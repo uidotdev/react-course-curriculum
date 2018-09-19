@@ -1,6 +1,10 @@
 var React = require('react')
 var Header = require('./Header')
 var Helper = require('../utils/Helper')
+var Interval = require('./Interval')
+var withRouter = require("react-router-dom")
+var Redirect = require('react-router-dom').Redirect
+var Link = require('react-router-dom').Link
 
 const headerStyles = {
   fontSize: "40px",
