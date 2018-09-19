@@ -84,3 +84,12 @@
   width: 100px;
   margin-left: 20px;
 }
+
+.main-details-container {
+  display:flex;
+  justify-content: center;
+}
+
+.details-box {
+
+}

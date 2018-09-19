@@ -7,7 +7,7 @@ var Router = ReactRouter.BrowserRouter;
 var Route = ReactRouter.Route;
 var Link = ReactRouter.Link
 var Forecast = require('./component/Forecast')
-
+var Interval = require('./component/Interval')
 
 class App extends React.Component {
   render() {
@@ -16,6 +16,7 @@ class App extends React.Component {
         <div>
           <Route exact path="/" component = {Home} />
           <Route path="/forecast" component={Forecast} />
+          <Route path="/detail/:interval" component = {Interval} />
         </div>
       </ Router>
     )

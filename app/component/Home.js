@@ -16,16 +16,6 @@ const styles = {
   color: "white"
 };
 
-// function parseInput(input) {
-//   if (input.includes(" ")) {
-//     let converted = input.split(" ")
-//     let inserted = converted[0] + "%20" + converted[1]
-//     return inserted
-//   } else {
-//     return input
-//   }
-// };
-
 class Home extends React.Component {
   constructor(props) {
     super(props);
