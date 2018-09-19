@@ -14,15 +14,32 @@ const headerStyles = {
 }
 
 function WeatherContainer (props) {
-  console.log(props.data)
   var date = props.data.dt
   var kelvin = props.data.main.temp
   var formatted = Helper.parseDate(date)
   var temp = Math.round(Helper.parseTemp(kelvin))
   let icon = props.data.weather[0].icon
+  let data = props.data
+  console.log(props)
+  // handleClick = function() {
+  //   props.history.push({
+  //     pathname: `/detail/${date}`,
+  //     state: {
+  //       data: props
+  //     }
+  //   });
+  //   return <Redirect
+  //             to={{
+  //               pathname: `/detail/${date}`,
+  //               state: {data: props}
+  //             }}
+  //           />
+  // };
+
+  // this.handleClick = this.handleClick.bind(this);
 
   return (
-    <div className="weather-container" onClick={this.handleClick}>
+    <div className="weather-container">
       <p>
         <img
           className="weather"
@@ -31,6 +48,21 @@ function WeatherContainer (props) {
       </p>
       <p> {formatted} </p>
       <p> {temp} Degrees Celsius </p>
+        <button
+          className="button"
+          onClick={this.handleClick}
+        >
+          Click for more details
+        </button>
+        <Link to={{
+          pathname: `detail/${date}`,
+          state: {
+            data: data
+          }
+        }} >
+          Get More details
+        </Link>
+
     </div>
   )
 }
@@ -39,6 +71,7 @@ class Forecast extends React.Component {
   render() {
     let weatherData = this.props.history.location.state.data
     let fiveDay = this.props.history.location.state.data[1];
+
     console.log(fiveDay);
     return(
       <div>
