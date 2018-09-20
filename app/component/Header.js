@@ -1,6 +1,6 @@
-var React = require('react')
-var axios = require('axios')
-var config = require('../../apiKeys')
+const React = require('react');
+const axios = require('axios');
+const config = require('../../apiKeys');
 
 class Header extends React.Component {
   constructor(props) {
@@ -8,57 +8,50 @@ class Header extends React.Component {
 
     this.state = {
       city: null,
-      state: null,
-      weatherData: []
+      weatherData: [],
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
-  };
+  }
+
   handleChange(e) {
     e.preventDefault();
-    let input = e.target.value.split(' ,');
-    this.setState(function() {
-      return {
-        city: input
-      }
-    });
-  };
+    const input = e.target.value.split(' ,');
+    this.setState(() => ({
+      city: input,
+    }));
+  }
 
   handleSubmit(e) {
     e.preventDefault();
-    city = this.state.city
+    city = this.state.city;
 
     function getCurrentWeather(city) {
-      return axios.get("http://api.openweathermap.org/data/2.5/weather?q="+ city + `&type=accurate&APPID=${config.apiKey}`)
-        .then(function(response) {
-          return(response.data)
-        })
-      };
+      return axios.get(`http://api.openweathermap.org/data/2.5/weather?q=${city}&type=accurate&APPID=${config.apiKey}`)
+        .then(response => (response.data));
+    }
 
     function getFiveDayForecast(city) {
-      return axios.get("http://api.openweathermap.org/data/2.5/forecast?q=" + city + `,us&mode=XML&APPID=${config.apiKey}&cnt=5`)
-        .then(function(response) {
-          return(response.data)
-        })
-      };
+      return axios.get(`http://api.openweathermap.org/data/2.5/forecast?q=${city},us&mode=XML&APPID=${config.apiKey}&cnt=5`)
+        .then(response => (response.data));
+    }
     axios.all([getCurrentWeather(city), getFiveDayForecast(city)])
       .then(axios.spread((currentWeatherResponse, fiveDayResponse) => {
-        this.setState({ weatherData: [...this.state.weatherData, currentWeatherResponse] })
-        this.setState({ weatherData: [...this.state.weatherData, fiveDayResponse]})
+        this.setState({ weatherData: [...this.state.weatherData, currentWeatherResponse] });
+        this.setState({ weatherData: [...this.state.weatherData, fiveDayResponse] });
       }))
       .then(() => {
         this.props.history.push({
           pathname: '/forecast',
           search: `?forecast?city=${this.state.city}`,
-          state: {
-              data: this.state.weatherData}
-        })
+          state: { data: this.state.weatherData },
+        });
       });
-    };
+  }
 
   render() {
-    return(
+    return (
       <div className="header-style">
         <p className="header-content-style"> Weather React App! </p>
         <div className="search-header">
@@ -69,19 +62,20 @@ class Header extends React.Component {
               placeholder="City & State"
               type="text"
               autoComplete="off"
-              onChange={this.handleChange}/>
+              onChange={this.handleChange}
+            />
             <button
               className="header-bar-button"
               type="submit"
-              >
+            >
               Get Weather
             </button>
           </form>
         </div>
       </div>
-    )
+    );
   }
 }
 
 
-module.exports = Header
+module.exports = Header;
