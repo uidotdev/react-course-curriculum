@@ -5,6 +5,11 @@
   width:200px;
 }
 
+body {
+  padding:0;
+  margin:0;
+}
+
 .header-bar-button:hover:enabled {
   background:
   linear-gradient(white, #0a0a0a);
@@ -25,7 +30,7 @@
 
 .home{
   background-image: url("/app/images/pattern.svg");
-  height:100%;
+  height:1000px;
 }
 
 .header-style {
