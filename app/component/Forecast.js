@@ -44,7 +44,6 @@ function WeatherContainer (props) {
 
 class Forecast extends React.Component {
   render() {
-    console.log(this.props.location.state.data[1].list)
     let weatherData = this.props.history.location.state.data
     let fiveDay = this.props.location.state.data[1].list;
 
