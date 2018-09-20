@@ -19,7 +19,7 @@ class App extends React.Component {
     return (
       <div>
         <Router>
-          <div>
+          <div className="home">
             <RoutedHeader />
             <Route exact path="/" component = {Home} />
             <Route path="/forecast" component={Forecast} />

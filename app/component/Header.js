@@ -58,7 +58,6 @@ class Header extends React.Component {
     };
 
   render() {
-    console.log("HEADER", this.props)
     return(
       <div className="header-style">
         <p className="header-content-style"> Weather React App! </p>
