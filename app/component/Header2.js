@@ -1,38 +1,26 @@
-var React = require('react');
-var Header = require('./Header');
-var PropTypes = require('prop-types');
+var React = require('react')
 var axios = require('axios')
 var config = require('../../apiKeys')
 var ReactRouter = require('react-router-dom')
 var Router = ReactRouter.BrowserRouter;
 var Route = ReactRouter.Route;
-var Link = ReactRouter.Link;
 var Forecast = require('./Forecast');
-var Redirect = ReactRouter.Redirect;
 
-const styles = {
-  marginLeft: "20px",
-  fontSize: "32px",
-  color: "white"
-};
-
-class Home extends React.Component {
+class Header extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
       city: null,
-      state: null,
       weatherData: []
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
   };
-
   handleChange(e) {
     e.preventDefault();
-    let input = e.target.value.split(' ,');
+    let input = e.target.value.split(' ,')[0];
     this.setState(function() {
       return {
         city: input
@@ -50,6 +38,7 @@ class Home extends React.Component {
           return(response.data)
         })
       };
+
     function getFiveDayForecast(city) {
       return axios.get("http://api.openweathermap.org/data/2.5/forecast?q=" + city + `,us&mode=XML&APPID=${config.apiKey}&cnt=5`)
         .then(function(response) {
@@ -73,20 +62,22 @@ class Home extends React.Component {
 
   render() {
 
+    console.log(this.props)
     return(
-        <div className="home">
-          <Header data={this.props}/>
-          <div className="main">
-            <p style={styles}>Enter a City</p>
-            <form className="column" onSubmit={this.handleSubmit}>
+      <Router>
+        <div className="header-style">
+          <p className="header-content-style"> Weather React App! </p>
+          <div className="search-header">
+            <form className="header-form" onSubmit={this.handleSubmit}>
               <input
+                className="header-input-form"
                 id="location"
-                placeholder="City"
+                placeholder="City & State"
                 type="text"
                 autoComplete="off"
                 onChange={this.handleChange}/>
               <button
-                className="button"
+                className="header-bar-button"
                 type="submit"
                 >
                 Get Weather
@@ -94,9 +85,10 @@ class Home extends React.Component {
             </form>
           </div>
         </div>
+      </Router>
     )
   }
-};
+}
 
 
-module.exports = Home
+module.exports = Header
