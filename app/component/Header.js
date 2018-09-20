@@ -48,7 +48,7 @@ class Header extends React.Component {
         this.setState({ weatherData: [...this.state.weatherData, fiveDayResponse]})
       }))
       .then(() => {
-        this.props.history.push({
+        this.props.data.history.push({
           pathname: '/forecast',
           search: `?forecast?city=${this.state.city}`,
           state: {
@@ -58,6 +58,7 @@ class Header extends React.Component {
     };
 
   render() {
+    console.log(this.props)
     return(
       <div className="header-style">
         <p className="header-content-style"> Weather React App! </p>

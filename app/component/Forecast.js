@@ -20,7 +20,7 @@ function WeatherContainer (props) {
   var temp = Math.round(Helper.parseTemp(kelvin))
   let icon = props.data.weather[0].icon
   let data = props.data
-  console.log(props)
+
   // handleClick = function() {
   //   props.history.push({
   //     pathname: `/detail/${date}`,
@@ -28,14 +28,8 @@ function WeatherContainer (props) {
   //       data: props
   //     }
   //   });
-  //   return <Redirect
-  //             to={{
-  //               pathname: `/detail/${date}`,
-  //               state: {data: props}
-  //             }}
-  //           />
   // };
-
+  //
   // this.handleClick = this.handleClick.bind(this);
 
   return (
@@ -48,12 +42,6 @@ function WeatherContainer (props) {
       </p>
       <p> {formatted} </p>
       <p> {temp} Degrees Celsius </p>
-        <button
-          className="button"
-          onClick={this.handleClick}
-        >
-          Click for more details
-        </button>
         <Link to={{
           pathname: `detail/${date}`,
           state: {
@@ -68,18 +56,18 @@ function WeatherContainer (props) {
 
 class Forecast extends React.Component {
   render() {
+    // console.log(this.props.history)
     let weatherData = this.props.history.location.state.data
     let fiveDay = this.props.history.location.state.data[1];
 
-    console.log(fiveDay);
     return(
       <div>
-        <Header />
+        <Header data={this.props}/>
           <div>
             <h1 style={headerStyles}>Forecast by 3 Hour Intervals in  {weatherData[0].name}</h1>
           </div>
           <div className="weather-by-day">
-            {fiveDay.list.map( p => <WeatherContainer key={p.id} data={p} />)}
+            {fiveDay.list.map( info  => <WeatherContainer key={info.dt} data={info} history={this.props.history}/>)}
           </div>
       </div>
     )

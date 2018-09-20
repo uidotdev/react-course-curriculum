@@ -74,9 +74,8 @@ class Home extends React.Component {
   render() {
 
     return(
-      <Router>
         <div className="home">
-          <Header />
+          <Header data={this.props}/>
           <div className="main">
             <p style={styles}>Enter a City</p>
             <form className="column" onSubmit={this.handleSubmit}>
@@ -95,7 +94,6 @@ class Home extends React.Component {
             </form>
           </div>
         </div>
-      </Router>
     )
   }
 };
