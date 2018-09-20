@@ -8,17 +8,25 @@ var Route = ReactRouter.Route;
 var Link = ReactRouter.Link
 var Forecast = require('./component/Forecast')
 var Interval = require('./component/Interval')
+var Header = require('./component/Header');
+import { withRouter } from 'react-router';
+
 
 class App extends React.Component {
   render() {
+
+    const RoutedHeader = withRouter(Header);
     return (
-      <Router>
-        <div>
-          <Route exact path="/" component = {Home} />
-          <Route path="/forecast" component={Forecast} />
-          <Route path="/detail/:interval" component = {Interval} />
-        </div>
-      </ Router>
+      <div>
+        <Router>
+          <div>
+            <RoutedHeader />
+            <Route exact path="/" component = {Home} />
+            <Route path="/forecast" component={Forecast} />
+            <Route path="/detail/:interval" component = {Interval} />
+          </div>
+        </Router>
+      </div>
     )
   }
 };

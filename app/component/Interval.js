@@ -27,25 +27,24 @@ class Interval extends React.Component {
     let icon = weatherData.icon
     return(
       <div>
-        <Header />
-          <div className='main-details-container'>
-            <h1>Additional Weather Details for {formatted}</h1>
-              <div className="details-box">
-                  <img
-                    className="weather-img"
-                    src={'../app/images/weather-icons/' + icon + '.svg'} alt="Weather"
-                  />
-                  <p id="detail-header">In Depth Weather Details </p>
-                  <p>Conditions: {weatherData.main} Skies</p>
-                  <p>Max Temp: {temp}</p>
-                  <p>Min Temp: {min}</p>
-                  <p>Humidity: {data.main.humidity}</p>
-                  <p>Wind Speed: {data.wind.speed} mph</p>
-                  <button onClick={this.props.history.goBack}>
-                    Go Back To Summary
-                  </button>
-              </div>
-          </div>
+        <div className='main-details-container'>
+          <h1>Additional Weather Details for {formatted}</h1>
+            <div className="details-box">
+                <img
+                  className="weather-img"
+                  src={'../app/images/weather-icons/' + icon + '.svg'} alt="Weather"
+                />
+                <p id="detail-header">In Depth Weather Details </p>
+                <p>Conditions: {weatherData.main} Skies</p>
+                <p>Max Temp: {temp}</p>
+                <p>Min Temp: {min}</p>
+                <p>Humidity: {data.main.humidity}</p>
+                <p>Wind Speed: {data.wind.speed} mph</p>
+                <button onClick={this.props.history.goBack}>
+                  Go Back To Summary
+                </button>
+            </div>
+        </div>
       </div>
     )
   }

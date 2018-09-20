@@ -75,7 +75,6 @@ class Home extends React.Component {
 
     return(
         <div className="home">
-          <Header data={this.props}/>
           <div className="main">
             <p style={styles}>Enter a City</p>
             <form className="column" onSubmit={this.handleSubmit}>

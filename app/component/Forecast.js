@@ -1,5 +1,4 @@
 var React = require('react')
-var Header = require('./Header')
 var Helper = require('../utils/Helper')
 var Interval = require('./Interval')
 var withRouter = require("react-router-dom")
@@ -62,13 +61,12 @@ class Forecast extends React.Component {
 
     return(
       <div>
-        <Header data={this.props}/>
-          <div>
-            <h1 style={headerStyles}>Forecast by 3 Hour Intervals in  {weatherData[0].name}</h1>
-          </div>
-          <div className="weather-by-day">
-            {fiveDay.list.map( info  => <WeatherContainer key={info.dt} data={info} history={this.props.history}/>)}
-          </div>
+        <div>
+          <h1 style={headerStyles}>Forecast by 3 Hour Intervals in  {weatherData[0].name}</h1>
+        </div>
+        <div className="weather-by-day">
+          {fiveDay.list.map( info  => <WeatherContainer key={info.dt} data={info} history={this.props.history}/>)}
+        </div>
       </div>
     )
   };
