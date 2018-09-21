@@ -53,6 +53,7 @@ Degrees Celsius
 
 class Forecast extends React.Component {
   render() {
+    console.log(this.props.history.location.state.data)
     const weatherData = this.props.history.location.state.data;
     const fiveDay = this.props.location.state.data[1].list;
 

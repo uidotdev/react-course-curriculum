@@ -25,7 +25,9 @@ class Header extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    city = this.state.city;
+    let city = this.state.city;
+    const emptyArray = []
+
 
     function getCurrentWeather(city) {
       return axios.get(`http://api.openweathermap.org/data/2.5/weather?q=${city}&type=accurate&APPID=${config.apiKey}`)
@@ -38,6 +40,7 @@ class Header extends React.Component {
     }
     axios.all([getCurrentWeather(city), getFiveDayForecast(city)])
       .then(axios.spread((currentWeatherResponse, fiveDayResponse) => {
+        this.setState({weatherData: emptyArray});
         this.setState({ weatherData: [...this.state.weatherData, currentWeatherResponse] });
         this.setState({ weatherData: [...this.state.weatherData, fiveDayResponse] });
       }))

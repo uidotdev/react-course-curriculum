@@ -54,6 +54,7 @@ class Home extends React.Component {
     }
     axios.all([getCurrentWeather(city), getFiveDayForecast(city)])
       .then(axios.spread((currentWeatherResponse, fiveDayResponse) => {
+        this.setState({ weatherData: this.state.weatherData.splice(0, this.state.weatherData.length)});
         this.setState({ weatherData: [...this.state.weatherData, currentWeatherResponse] });
         this.setState({ weatherData: [...this.state.weatherData, fiveDayResponse] });
       }))
