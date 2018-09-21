@@ -1,16 +1,7 @@
 const React = require('react');
-const PropTypes = require('prop-types');
 const axios = require('axios');
-const ReactRouter = require('react-router-dom');
 const config = require('../../apiKeys');
-const Header = require('./Header');
 
-const Router = ReactRouter.BrowserRouter;
-const Route = ReactRouter.Route;
-const Link = ReactRouter.Link;
-const Forecast = require('./Forecast');
-
-const Redirect = ReactRouter.Redirect;
 
 const styles = {
   marginLeft: '20px',
@@ -24,7 +15,6 @@ class Home extends React.Component {
 
     this.state = {
       city: null,
-      state: null,
       weatherData: [],
     };
 
@@ -42,7 +32,7 @@ class Home extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    city = this.state.city;
+    const { city } = this.state;
 
     function getCurrentWeather(city) {
       return axios.get(`http://api.openweathermap.org/data/2.5/weather?q=${city}&type=accurate&APPID=${config.apiKey}`)

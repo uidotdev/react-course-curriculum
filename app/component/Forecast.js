@@ -10,12 +10,12 @@ const headerStyles = {
 };
 
 function WeatherContainer(props) {
-  const date = props.data.dt;
-  const kelvin = props.data.main.temp;
-  const formatted = Helper.parseDate(date);
-  const temp = Math.round(Helper.parseTemp(kelvin));
-  const icon = props.data.weather[0].icon;
-  const data = props.data;
+  const { dt } = props.data;
+  const { temp } = props.data.main;
+  const formatted = Helper.parseDate(dt);
+  const fahrenheit = Math.round(Helper.parseTemp(temp));
+  const { icon } = props.data.weather[0];
+  const { data } = props;
 
   return (
     <div className="weather-container">
@@ -33,13 +33,13 @@ function WeatherContainer(props) {
       </p>
       <p>
         {' '}
-        {temp}
+        {fahrenheit}
         {' '}
 Degrees Celsius
         {' '}
       </p>
       <Link to={{
-        pathname: `detail/${date}`,
+        pathname: `detail/${dt}`,
         state: {
           data,
         },
@@ -53,9 +53,8 @@ Degrees Celsius
 
 class Forecast extends React.Component {
   render() {
-    console.log(this.props.history.location.state.data)
     const weatherData = this.props.history.location.state.data;
-    const fiveDay = this.props.location.state.data[1].list;
+    const fiveDay = weatherData[1].list;
 
     return (
       <div>

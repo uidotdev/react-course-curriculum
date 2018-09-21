@@ -26,7 +26,7 @@ class Header extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     let city = this.state.city;
-    const emptyArray = []
+    let emptyArray = []
 
 
     function getCurrentWeather(city) {
@@ -40,7 +40,7 @@ class Header extends React.Component {
     }
     axios.all([getCurrentWeather(city), getFiveDayForecast(city)])
       .then(axios.spread((currentWeatherResponse, fiveDayResponse) => {
-        this.setState({weatherData: emptyArray});
+        this.setState({ weatherData: emptyArray });
         this.setState({ weatherData: [...this.state.weatherData, currentWeatherResponse] });
         this.setState({ weatherData: [...this.state.weatherData, fiveDayResponse] });
       }))
