@@ -1,0 +1,103 @@
+*{
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.6em;
+    margin:0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.container{
+    width: 90%;
+    margin: auto;
+}
+
+#main-header{
+    background-color:orangered;
+    padding: 15px 0;
+    height: 8%;
+}
+
+#main-interface{
+    height: 90%;
+    background-image:url('app/images/pattern.svg');
+    background: no-repeat 50% 50% fixed;
+    background-size: cover;
+}
+
+#main-header h1{
+    width: 50%;
+    font-size: 30px;
+    float:left;
+    display: block;
+}
+
+#main-header input,
+#main-header .btn{
+    width: 20%;
+    float:right;
+    display: block;
+    margin-left: 1%;
+}
+
+#main-interface{
+    position: relative;
+}
+
+#main-interface .container{
+    position: absolute;
+    top: 75%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+
+#main-interface input, 
+#main-interface p ,
+#main-interface .btn {
+    width: 30%;
+    height: 10%;
+    display: block;
+    margin: auto;
+}
+
+#main-interface p{
+    width:60%;
+    height: 15%;
+    margin-bottom: 15px;
+    font-size: 50px;
+    text-align: center;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    font-weight: 300;
+}
+
+#main-interface .btn{
+    width: 15%;
+    margin-top: 30px;
+}
+
+.btn{
+    color: white;
+    border-radius: 20px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    background: rgb(28, 184, 65); 
+    border: none;
+    outline: none;
+}
+
+.input{
+    border: none;
+    border-radius: 20px;
+    color:#333;
+    padding-left:15px; 
+    font-size: 20px;
+    outline:none;
+
+}
+
+/* .input::placeholder{
+   padding-left:15px; 
+   font-size: 20px;
+} */
+

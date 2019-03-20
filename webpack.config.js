@@ -10,6 +10,7 @@ module.exports={
         rules:[
             {test:/\.(js)$/,use: 'babel-loader'},
             {test:/\.css$/,use: ['style-loader', 'css-loader']},
+            {test:/\.svg$/,use:['react-svg-loader']}
         ]
     },
     mode: 'development',
@@ -20,5 +21,5 @@ module.exports={
         new HtmlWebpackPlugin({
             template: 'app/index.html'
         })
-    ]
+    ],
 }
