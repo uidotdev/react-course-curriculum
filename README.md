@@ -35,6 +35,6 @@ There are a few different ways you can approach this, each with varying difficul
 
 Light Mode          |  Dark Mode
 :-------------------------:|:-------------------------:
-![](https://user-images.githubusercontent.com/2933430/55542402-35cfe680-5684-11e9-88d8-2273c8163a58.png) ![](https://user-images.githubusercontent.com/2933430/55542321-0e791980-5684-11e9-9ee3-1b5b2090a370.png) ![](https://user-images.githubusercontent.com/2933430/55542320-0de08300-5684-11e9-8dd6-2004ed3c3b1d.png) |  ![](https://user-images.githubusercontent.com/2933430/55542330-0faa4680-5684-11e9-9316-638ba27030c5.png) ![](https://user-images.githubusercontent.com/2933430/55542327-0f11b000-5684-11e9-90cb-866c0533b774.png) ![](https://user-images.githubusercontent.com/2933430/55542317-0de08300-5684-11e9-8376-e24d39fa6b2d.png)
+![](https://user-images.githubusercontent.com/2933430/55542659-c0b0e100-5684-11e9-9877-20f218c8fde5.png) ![](https://user-images.githubusercontent.com/2933430/55542657-c0184a80-5684-11e9-9473-8a153a232301.png) ![](https://user-images.githubusercontent.com/2933430/55542656-c0184a80-5684-11e9-923b-2836944a474a.png) |  ![](https://user-images.githubusercontent.com/2933430/55542654-c0184a80-5684-11e9-9436-9b3ae973e8b5.png) ![](https://user-images.githubusercontent.com/2933430/55542658-c0b0e100-5684-11e9-821f-03dc5f80c97c.png) ![](https://user-images.githubusercontent.com/2933430/55542655-c0184a80-5684-11e9-832b-657b683d0625.png)
 
 ### [Tyler McGinnis](https://twitter.com/tylermcginnis)
