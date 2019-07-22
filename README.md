@@ -19,7 +19,9 @@ You can view the final project at __[tm.dev/react-course-curriculum](https://tm.
 
 ### Solution
 
-If you get stuck, you can view my solution by checking out the `solution` branch.
+If you get stuck, you can view my solution by checking out the `solution` branch. 
+
+You will need to use React's `dangerouslySetInnerHTML` prop to show the HTML posts that the API gives you. We didn't cover it in the course but you can [read about it here](https://reactjs.org/docs/dom-elements.html#dangerouslysetinnerhtml).
 
 ### Approaches
 
