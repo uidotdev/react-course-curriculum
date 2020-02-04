@@ -3,7 +3,7 @@
   <br>
 </h1>
 
-<h3 align="center">React Course Curriculum - <a href="https://tm.dev/react-course-curriculum/">Hacker News Clone</a></h3>
+<h3 align="center">React Course Curriculum - <a href="https://ui-hacker-news.netlify.com/">Hacker News Clone</a></h3>
 
 ### Info
 
@@ -15,7 +15,7 @@ For more information on the course, visit __[tm.dev/courses/react](https://tm.de
 
 This is a (soft) "Hacker News" clone. 
 
-You can view the final project at __[tm.dev/react-course-curriculum](https://tm.dev/react-course-curriculum/)__
+You can view the final project at __[tm.dev/react-course-curriculum](https://ui-hacker-news.netlify.com/)__
 
 ### Solution
 
