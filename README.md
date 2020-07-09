@@ -1,21 +1,25 @@
 <h1 align="center">
-  <a href="https://tylermcginnis.com"><img src="https://tylermcginnis.com/tylermcginnis_glasses-300.png" alt="TylerMcGinnis.com Logo" width="300"></a>
-  <br>
+  <a href="https://ui.dev">
+    <img
+      src="https://ui.dev/images/logos/ui.png"
+      alt="UI.dev Logo" width="300" />
+  </a>
+  <br />
 </h1>
 
-<h3 align="center">React Course Curriculum - <a href="https://ui-hacker-news.netlify.com/">Hacker News Clone</a></h3>
+<h3 align="center">React Course Curriculum - <a href="https://hn.ui.dev/">Hacker News Clone</a></h3>
 
 ### Info
 
-This is the repository for TylerMcGinnis.com's "React" course curriculum project.
+This is the repository for UI.dev's "React" course curriculum project.
 
-For more information on the course, visit __[tm.dev/courses/react](https://tm.dev/courses/react/)__.
+For more information on the course, visit __[ui.dev/react](https://ui.dev/react/)__.
 
 ### Project
 
 This is a (soft) "Hacker News" clone. 
 
-You can view the final project at __[tm.dev/react-course-curriculum](https://ui-hacker-news.netlify.com/)__
+You can view the final project at __[hn.ui.dev](https://hn.ui.dev/)__
 
 ### Solution
 
@@ -27,11 +31,11 @@ You will need to use React's `dangerouslySetInnerHTML` prop to show the HTML pos
 
 There are a few different ways you can approach this, each with varying difficulties. 
 
-+ Hardest: Look at the [finished project](https://tm.dev/react-course-curriculum/) and build it. This is obviously the hardest approach but the one you'll gain the most learning from. The only thing that you'll need is the documentation for the [Hacker News API](https://github.com/HackerNews/API).
++ Hardest: Look at the [finished project](https://hn.ui.dev/) and build it. This is obviously the hardest approach but the one you'll gain the most learning from. The only thing that you'll need is the documentation for the [Hacker News API](https://github.com/HackerNews/API).
 
-+ Whatever word is between "Hardest" and "Easiest": Copy my [api.js](https://github.com/tylermcginnis/react-course-curriculum/blob/solution/app/utils/api.js) file to your project then build the app. After all, you're here to learn React, not the Hacker News API. If you took this approach, I wouldn't blame you.
++ Whatever word is between "Hardest" and "Easiest": Copy my [api.js](https://github.com/uidotdev/react-course-curriculum/blob/solution/app/utils/api.js) file to your project then build the app. After all, you're here to learn React, not the Hacker News API. If you took this approach, I wouldn't blame you.
 
-+ Easiest: Take 10-15 minutes to walk through [my code](https://github.com/tylermcginnis/react-course-curriculum/tree/solution). Notice how I approached different problems and how you may or may not want to do something similar. From there, start building and reference my project only as you need it.
++ Easiest: Take 10-15 minutes to walk through [my code](https://github.com/uidotdev/react-course-curriculum/tree/solution). Notice how I approached different problems and how you may or may not want to do something similar. From there, start building and reference my project only as you need it.
 
 ### Project Preview
 
